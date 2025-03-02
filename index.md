@@ -7,11 +7,11 @@ hero:
   tagline: Administer's official documentation.
   actions:
     - theme: brand
+      text: Quickstart Guide
+      link: /v2/apps/quickstart
+    - theme: alt
       text: What is Administer?
       link: /what-is-administer
-    - theme: alt
-      text: App Quickstart
-      link: /apps/quickstart
   image:
     src: /logo.png
     alt: "Administer Logo"
@@ -19,12 +19,12 @@ hero:
 features:
   - icon: 🛠️
     title: Customizable
-    details: Customize the interface, text, or anything else you'd like.
+    details: Everything about Administer can be changed to fit your needs.
   - icon: 🧰
     title: Modular
-    details: Get all the commands that your team needs, none of what you don't.
+    details: Get all what your team needs, none of what you don't.
   - icon: 🔓
-    title: Open Source
-    details: The entire backend and frontend is open source with an open API and documentation.
+    title: Open
+    details: We foster an open ecosystem with an open API and app platform
 ---
 

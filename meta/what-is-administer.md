@@ -1,7 +1,5 @@
 # What is Administer?
 
-## What is it?
-
 Administer is an admin system which takes modularity to a level never seen before. You only keep what you need. Don't need announcements? Get rid of it.
 We also have a modern and consistient admin panel which does everything you'll ever need from any panel.
 
