@@ -30,25 +30,18 @@ See our handy comparison chart here. See something missing or incorrect? Let us 
 
 <small>
 
-<>* Information on BAE is limited on the forum. I found [a tutorial on how to use it](https://devforum.roblox.com/t/the-ultimate-basic-admin-essentials-guide/3019051?u=pyxfluff) but that's about it. The loader has an update date of 7/2017 so I'm assuming it is not maintained. [The module](https://create.roblox.com/store/asset/563619835/BAE-20-Module) is showing me a 404.
+* Information on BAE is limited on the forum. I found [a tutorial on how to use it](https://devforum.roblox.com/t/the-ultimate-basic-admin-essentials-guide/3019051?u=pyxfluff) but that's about it. The loader has an update date of 7/2017 so I'm assuming it is not maintained. [The module](https://create.roblox.com/store/asset/563619835/BAE-20-Module) is showing me a 404.
+* "backdoor" section is (mostly) a joke, do not take it seriously. Installing `HD Admin` or `product: exe`. into your game does not actually backdoor it.
 
 </small>
 
 ## Our current library of apps
 
-New apps are added all the time! Check back here or on the Marketplace to see our latest.
+::: warning
+At the time of writing this is not done yet so please just see the panel for the time being.
+:::
 
-### Player Management
-
-Manage your game's players from any server. Send messages, kick, ban, and create warnings from anywhere.
-
-### Announcements
-
-Send announcements globally from any server. Pick specific servers and user IDs to limit who gets the message.
-
-### Team Manager
-
-Manage your game's teams with support for saving.
+Please see https://administer.notpyx.me/apps/dir
 
 ## Installation
 

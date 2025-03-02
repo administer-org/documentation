@@ -7,8 +7,8 @@ hero:
   tagline: Administer's official documentation.
   actions:
     - theme: brand
-      text: Quickstart Guide
-      link: /v2/apps/quickstart
+      text: 1.0.0 API Quickstart
+      link: /v1/apps/quickstart
     - theme: alt
       text: What is Administer?
       link: /what-is-administer

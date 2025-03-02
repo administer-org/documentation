@@ -2,11 +2,18 @@
 
 Creating an Administer app is about as easy as it can get.
 
-<div class = "tip custom-block" style = "padding-top: 8px">
+::: tip Need more in-depth information?
 
-Need the full documentation? Skip to the [Detailed Documentation](./namespace/app.md).
+Skip to the [Detailed Documentation](./namespace/app.md).
 
-</div>
+:::
+
+::: warning Hi there, v1 user!
+
+The v1 API (for Administer 1.0.0 - 1.2.4) is soon going to be replaced with the 2.0 API. We do not recommend you write any new applications with the V1 API and instead hold out for the 2.0 API unless you are prepared to migrate a large potrion of your Administer-facing code.
+
+:::
+
 
 ## Ideal structure
 
