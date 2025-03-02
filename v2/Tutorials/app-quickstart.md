@@ -32,7 +32,7 @@ end
 Everything in this section will be small portions of otherwise bigger concepts found [in the InvocationAPI document.](../types/invocation-api.md)
 :::
 
-Now, inside of that function, you can create a new [RichConfig](../apps/types/rich-config) object and ask for the InvocationAPI to build it, like so:
+Now, inside of that function, you can create a new [RichConfig](../apps/types/richconfig) object and ask for the InvocationAPI to build it, like so:
 
 ```lua
 local RichConfig = InvokeAPI.RichConfig()
