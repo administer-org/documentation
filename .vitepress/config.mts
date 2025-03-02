@@ -11,6 +11,7 @@ export default defineConfig(withSidebar({
         ["link", { rel: "icon", href: "/logo.png" }],
         ["meta", { name: "darkreader-lock" }],
     ],
+    ignoreDeadLinks: true,
     cleanUrls: true,
     themeConfig: {
         logo: "/logo.png",
