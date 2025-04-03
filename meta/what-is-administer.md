@@ -32,6 +32,8 @@ See our handy comparison chart here. See something missing or incorrect? Let us 
 
 * Information on BAE is limited on the forum. I found [a tutorial on how to use it](https://devforum.roblox.com/t/the-ultimate-basic-admin-essentials-guide/3019051?u=pyxfluff) but that's about it. The loader has an update date of 7/2017 so I'm assuming it is not maintained. [The module](https://create.roblox.com/store/asset/563619835/BAE-20-Module) is showing me a 404.
 * "backdoor" section is (mostly) a joke, do not take it seriously. Installing `HD Admin` or `product: exe`. into your game does not actually backdoor it.
+^ (you used to be able to, butdocumentation is a dead link)
+& (doesn't really do anything)
 
 </small>
 

@@ -18,7 +18,7 @@ export default defineConfig(withSidebar({
 
         socialLinks: [
             { icon: "github", link: "https://github.com/administer-org" },
-            { icon: "discord", link: "https://administer.notpyx.me/to/discord" },
+            { icon: "discord", link: "https://to.admsoftware.org/github" },
             { icon: "bluesky", link: "https://bsky.app/profile/notpyx.me" },
             {
                 icon: {
