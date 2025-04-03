@@ -14,7 +14,7 @@ export default defineConfig(withSidebar({
     ignoreDeadLinks: true,
     cleanUrls: true,
     themeConfig: {
-        logo: "/logo.png",
+        logo: "https://github.com/administer-org/.github/blob/main/profile/CnP_02042025_235822.png?raw=true",
 
         socialLinks: [
             { icon: "github", link: "https://github.com/administer-org" },
