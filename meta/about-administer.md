@@ -1,5 +1,5 @@
 <style>
-    .smaller { font-size: 10px; }
+    .smaller { font-size: 10px; line-height: 20px !important; }
 </style>
 
 # What is Administer?
