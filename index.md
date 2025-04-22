@@ -7,11 +7,11 @@ hero:
   tagline: Administer's official documentation.
   actions:
     - theme: brand
-      text: 2.0 API Quickstart
-      link: /v2/Tutorials/app-quickstart
+      text: Get Started
+      link: /quickstart/installation
     - theme: alt
-      text: What is Administer?
-      link: /meta/what-is-administer
+      text: About Administer
+      link: /meta/about-administer
   image:
     src: https://github.com/administer-org/.github/blob/main/profile/CnP_02042025_235822.png?raw=true
     alt: "Administer Logo"

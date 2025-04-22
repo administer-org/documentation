@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 import { withSidebar } from 'vitepress-sidebar';
 
 
-export default defineConfig(withSidebar({
+export default defineConfig({
     title: "Administer",
     titleTemplate: ":title · Documentation",
     description: "Administer's documentation. Learn how to make your own app and more.",
@@ -18,7 +18,7 @@ export default defineConfig(withSidebar({
 
         socialLinks: [
             { icon: "github", link: "https://github.com/administer-org" },
-            { icon: "discord", link: "https://to.admsoftware.org/github" },
+            { icon: "discord", link: "https://discord.gg/c8dC4k3J5Y" },
             { icon: "bluesky", link: "https://bsky.app/profile/notpyx.me" },
             {
                 icon: {
@@ -33,8 +33,86 @@ export default defineConfig(withSidebar({
                 link: "https://devforum.roblox.com/t/3179989/",
             },
         ],
+
+        sidebar: [
+            {
+                text: 'Information',
+                collapsible: true,
+                collapsed: false,
+                items: [
+                    { text: 'About Administer', link: '/meta/about-administer' },
+                    { text: 'Donations and Contributions', link: '/meta/donation-contribution' },
+                    { 
+                        text: 'Getting Started:',
+                        collapsible: true,
+                        collapsed: true,
+                        items: [
+                            { text: 'Installation', link: '/quickstart/installation' },
+                            { text: 'Initial Configuration', link: '/quickstart/initialConfig' },
+                        ]
+                    },
+                    
+                ]
+            },
+            {
+                text: 'V1 API',
+                collapsible: true,
+                collapsed: true,
+                items: [
+                    { text: 'Quickstart Guide', link: '/v1/apps/quickstart' },
+                    { 
+                        text: 'namespace',
+                        collapsible: true,
+                        collapsed: true,
+                        items: [
+                            { text: 'app', link: '/v1/apps/namespace/app' },
+                            { text: 'builtapi', link: '/v1/apps/namespace/builtapi' },
+                            { text: 'settings', link: '/v1/apps/namespace/settings' },
+                            { text: 'widgetconfig', link: '/v1/apps/namespace/widgetconfig' },
+                        ]
+                    },
+                ]
+            },
+            {
+                text: 'V2 API',
+                collapsible: true,
+                collapsed: true,
+                items: [
+                    { text: 'Quickstart Guide', link: '/v2/tutorials/app-quickstart' },
+                    { 
+                        text: 'help',
+                        collapsible: true,
+                        collapsed: true,
+                        items: [
+                            { text: 'extra-data', link: '/v2/apps/help/extra-data' },
+                        ]
+                    },
+                    { 
+                        text: 'types',
+                        collapsible: true,
+                        collapsed: true,
+                        items: [
+                            { text: 'app', link: '/v2/apps/types/app' },
+                            { text: 'builtapi', link: '/v2/apps/types/builtapi' },
+                            { text: 'invocation-api', link: '/v2/apps/types/invocation-api' },
+                            { text: 'module', link: '/v2/apps/types/module' },
+                            { text: 'richconfig', link: '/v2/apps/types/richconfig' },
+                            { text: 'settings', link: '/v2/apps/types/settings' },
+                            { text: 'typesapi', link: '/v2/apps/types/typesapi' },
+                            { text: 'widgetconfig', link: '/v2/apps/types/widgetconfig' },
+                        ]
+                    },
+                ]
+            },
+            {
+                text: 'Legal',
+                collapsible: true,
+                collapsed: true,
+                items: [
+                    { text: 'Privacy Policy', link: '/legal/privacy' },
+                ]
+            },
+        ]
+
     },
-}, {
-    // Sidebar config
-    useTitleFromFileHeading: true,
-}));
+});
