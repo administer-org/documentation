@@ -42,7 +42,7 @@ export default defineConfig({
                 items: [
                     { text: 'About Administer', link: '/meta/about-administer' },
                     { text: 'Donations and Contributions', link: '/meta/donation-contribution' },
-                    { 
+                    {
                         text: 'Getting Started:',
                         collapsible: true,
                         collapsed: true,
@@ -51,7 +51,7 @@ export default defineConfig({
                             { text: 'Initial Configuration', link: '/quickstart/initialConfig' },
                         ]
                     },
-                    
+
                 ]
             },
             {
@@ -60,7 +60,7 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                     { text: 'Quickstart Guide', link: '/v1/apps/quickstart' },
-                    { 
+                    {
                         text: 'namespace',
                         collapsible: true,
                         collapsed: true,
@@ -79,7 +79,7 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                     { text: 'Quickstart Guide', link: '/v2/tutorials/app-quickstart' },
-                    { 
+                    {
                         text: 'help',
                         collapsible: true,
                         collapsed: true,
@@ -87,7 +87,7 @@ export default defineConfig({
                             { text: 'extra-data', link: '/v2/apps/help/extra-data' },
                         ]
                     },
-                    { 
+                    {
                         text: 'types',
                         collapsible: true,
                         collapsed: true,
@@ -105,14 +105,33 @@ export default defineConfig({
                 ]
             },
             {
-                text: 'Legal',
+                text: 'AOS',
                 collapsible: true,
                 collapsed: true,
                 items: [
-                    { text: 'Privacy Policy', link: '/legal/privacy' },
+                    {
+                        text: 'API Reference',
+                        collapsible: true,
+                        collapsed: true,
+                        items: [
+                           
+                        ]
+                    },
+
+                    {
+                        text: 'Legal',
+                        collapsible: true,
+                        collapsed: true,
+                        items: [
+                            { text: 'Privacy Policy', link: '/AOS/legal/privacy' },
+                        ]
+                    },
+
+                    { text: 'What is AOS?', link: '/AOS/information/about' },
+                    { text: 'Public AOS Nodes', link: '/AOS/information/nodes' },
                 ]
             },
         ]
 
-    },
+    }
 });
