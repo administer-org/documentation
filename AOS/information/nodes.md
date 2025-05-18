@@ -15,19 +15,21 @@ No, the production database is private and may not be accessed by your own serve
 ----
 
 # Database Nodes
+
 ## db-us-1
 > Runs on `aos-us-1` 
 
-> Primary Mongo node, hosts the ReplicaSet
-
-> Connected to by `aos-us-1`, `aos-us-3`, `aos-canary`
+> Primary node
 
 ## db-us-2
 > Runs on `aos-us-2` 
 
 > During prolonged outages, other nodes may manually be set to contact this instance. 
 
-> Connected to by `aos-us-2`.
+## db-us-3
+> Runs on `aos-us-3` 
+
+> Exists mostly as a fallback
 
 ## db-eur-1
 > Runs on `aos-eur-1` 
@@ -46,21 +48,21 @@ No, the production database is private and may not be accessed by your own serve
 ## aos-us-2
 > Region: US/GA
 
-# aos-us-3
+## aos-us-3
 > Generally used if all other US servers are down or busy
 
 > Bare metal server, rare downtime
 
 > Region: US/FL
 
-# aos-eur-1
+## aos-eur-1
 > Recommended home server for Europe/Asia game instances
 
 > Cloud server, rare downtime
 
 > Region: EU/UK
 
-# aos-canary
+## aos-canary
 > Exists for public testing
 
 > Runs latest AOS software, generally unstable
