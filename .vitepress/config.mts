@@ -72,7 +72,7 @@ export default defineConfig({
                 ]
             },
             {
-                text: 'Administer App API',
+                text: 'Administer API',
                 collapsible: true,
                 collapsed: true,
                 items: [

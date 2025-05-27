@@ -19,7 +19,7 @@ After you have that, you can set up your widgets for client use.
 A simple string to specify what your widgets are made for. For now, you can have something like this:
 
 ```lua
-["_generator"] = "AdministerWidgetConfig-1.0",
+["_generator"] = "AdministerWidgetConfig-1.0"
 ```
 
 If you would like to add extra metadata, this is the place. Just make sure to add an extra slash.
@@ -27,11 +27,11 @@ If you would like to add extra metadata, this is the place. Just make sure to ad
 ::: code-group
 
 ```lua [Template]
-["_generator"] = "AdministerWidgetConfig-WIDGET_CONFIG_VERS-EXTRA_META",
+["_generator"] = "AdministerWidgetConfig-WIDGET_CONFIG_VERS-EXTRA_META"
 ```
 
 ```lua [Example]
-["_generator"] = "AdministerWidgetConfig-1.0-Made by @pyxfluff (2024)",
+["_generator"] = "AdministerWidgetConfig-1.0-Made by @pyxfluff (2024)"
 ```
 
 :::
