@@ -78,7 +78,7 @@ export default defineConfig({
                 items: [
                     { text: 'Quickstart Guide', link: '/v2/tutorials/app-quickstart' },
                     {
-                        text: 'help',
+                        text: 'Help',
                         collapsible: true,
                         collapsed: true,
                         items: [
@@ -86,17 +86,24 @@ export default defineConfig({
                         ]
                     },
                     {
-                        text: 'types',
+                        text: 'Types',
                         collapsible: true,
                         collapsed: true,
                         items: [
-                            { text: 'app', link: '/v2/apps/types/app' },
                             { text: 'builtapi', link: '/v2/apps/types/builtapi' },
                             { text: 'invocation-api', link: '/v2/apps/types/invocation-api' },
-                            { text: 'module', link: '/v2/apps/types/module' },
                             { text: 'richconfig', link: '/v2/apps/types/richconfig' },
-                            { text: 'settings', link: '/v2/apps/types/settings' },
-                            { text: 'typesapi', link: '/v2/apps/types/typesapi' },
+                            { text: 'widgetconfig', link: '/v2/apps/types/widgetconfig' }
+                        ]
+                    },
+                     {
+                        text: 'Server Modules',
+                        collapsible: true,
+                        collapsed: true,
+                        items: [
+                            { text: 'Apps', link: '/v2/server/apps' },
+                            { text: 'invocation-api', link: '/v2/apps/types/invocation-api' },
+                            { text: 'richconfig', link: '/v2/apps/types/richconfig' },
                             { text: 'widgetconfig', link: '/v2/apps/types/widgetconfig' }
                         ]
                     }
