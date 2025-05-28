@@ -6,7 +6,11 @@ First, the AOS database is on `administer_dev`, not `administer`. Any ratings or
 
 We are currently running off a raspberry pi (which is still tracked at https://status.admsoftware.org under "AOS Canary"), so please excuse any slowness in AOS. Using other AOS nodes will not be possible at the moment because they are hooked into the production database which uses a different schema than dev uses. When we do a full release our network of 5 nodes will be fully in use, so please do not report API slowness.
 
-When you join your game for the first time, Administer should auto-migrate. This will take anywhere from 15 seconds to a couple of minutes depending on how many ranks and admins you have added. **NOTE: ALL USERS WILL BE GIVEN "SUPER ADMIN", MEANING THEY HAVE ACCESS TO EVERY APP!!**
+When you join your game for the first time, Administer should auto-migrate. This will take anywhere from 15 seconds to a couple of minutes depending on how many ranks and admins you have added.
+
+::: danger IMPORTANT
+ALL USERS WILL BE GIVEN "SUPER ADMIN", MEANING THEY HAVE ACCESS TO EVERY APP!! This is because there is no good system to migrate old Administer ranks to new one, so we decided this was the best option.
+:::
 
 If you don't want that, you can delete the ranks and create new ones using the new permission system.
 
