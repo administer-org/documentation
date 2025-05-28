@@ -31,5 +31,7 @@ Simply launch the "2.0 reporter" app from within the panel.
 
 ![2.0 Assistant Location](assistant.png)
 
+You can also join [the Discord](https://to.admsoftware.org/discord) and open bug reporting tickets if you need to share media or anything else. The Reporting Agent is designed for quick reports and feedback.
+
 
 And that's it! Let us know if you have any other questions or concerns - our support team will do our best to assist.
