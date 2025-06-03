@@ -108,6 +108,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { text: 'Apps', link: '/v2/server/apps' },
+                            { text: 'AdminRunner', link: '/v2/server/adminrunner' },
                         ]
                     }
                 ]
