@@ -8,6 +8,7 @@ Setting an AOS Server up is simple! Just follow a quick few steps and you'll be 
 - Pip (required by the installer)
 - MongoDB (8.0.x recommended)
 - Linux (arch, debian, or fedora if you want to suffer)
+  - Using systems such as Windows and macOS is possible but we do not offer support or automated setup for them. However, the steps should generally be the same. For more information, see the bottom of this page.
 
 ## Getting started
 
@@ -82,4 +83,4 @@ python3 -m AOS
 python3 -m AOS core serve
 ```
 
-If you are looking for AOS to start on boot, you will need to use your OS' scheduler if systemd is not available (Task Scheduler on Windows, systemd on Linux, launchd on macOS)
+If you are looking for AOS to start on boot, you will need to use your OS' scheduler (Task Scheduler on Windows, systemd on Linux, launchd on macOS)
