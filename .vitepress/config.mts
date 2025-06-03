@@ -12,6 +12,9 @@ export default defineConfig({
     ],
     ignoreDeadLinks: true,
     cleanUrls: true,
+    sitemap: {
+        hostname: "https://docs.admsoftware.org"
+    },
     themeConfig: {
         logo: "https://github.com/administer-org/.github/blob/main/profile/CnP_02042025_235822.png?raw=true",
 
