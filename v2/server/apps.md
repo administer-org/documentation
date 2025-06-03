@@ -1,5 +1,7 @@
 # Apps
 
+Handles loading Apps, managing AOS Instances, and more.
+
 ## `Apps` (parent)
 
 ::: warning
