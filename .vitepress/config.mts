@@ -41,6 +41,7 @@ export default defineConfig({
                 items: [
                     { text: 'About Administer', link: '/meta/about-administer' },
                     { text: 'Donations and Contributions', link: '/meta/donation-contribution' },
+                    { text: 'Contact Us', link: '/meta/contact' },
                     {
                         text: 'Getting Started',
                         collapsible: true,
@@ -134,7 +135,8 @@ export default defineConfig({
 
                     { text: 'What is AOS?', link: '/AOS/information/about' },
                     { text: 'Public AOS Nodes', link: '/AOS/information/nodes' },
-                    { text: 'Quickstart', link: '/AOS/maintaining/setup' }
+                    { text: 'Quickstart', link: '/AOS/maintaining/setup' },
+                    { text: 'Recommended Specs', link: '/AOS/maintaining/recommended-specs' }
                 ]
             }
         ]
