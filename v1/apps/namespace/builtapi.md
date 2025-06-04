@@ -8,7 +8,7 @@ Some methods are reserved for future use (such as NotificationVisibility).
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 NewNotification(
     Notifications: Table {
         Player: Player,
@@ -24,7 +24,7 @@ NewNotification(
 ): nil
 ```
 
-```lua [Example]
+```luau [Example]
 NewNotification({
     ["Player"] = game.Players[1],
     ["Body"] = "Hello, world!",
@@ -61,7 +61,7 @@ Creates a new notification icon on your app's tile. Does not persist over saves.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 AppNotificationBlip(
     {
         Player: player,
@@ -70,7 +70,7 @@ AppNotificationBlip(
 ): table: {Success: bool, ErrorMessage: nil | string}
 ```
 
-```lua [Example]
+```luau [Example]
 AppNotificationBlip({game.Players.pyxfluff, 5})
 ```
 
@@ -80,11 +80,11 @@ AppNotificationBlip({game.Players.pyxfluff, 5})
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 IsAdmin(Player: Player, GroupsList: Table{Number}?): Table
 ```
 
-```lua [Response]
+```luau [Response]
 {
     false,                          -- Is Admin?
     "Found in AdminIDS override",   -- Reasoning
@@ -108,11 +108,11 @@ The following methods are pending removal in a future version and will be conden
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 NewRemoteEvent(Name: string, OnServerEvent: Function, ...): RemoteEvent
 ```
 
-```lua [Example]
+```luau [Example]
 NewRemoteEvent(
     "SendMessage",
     function (player, message)
@@ -133,11 +133,11 @@ Any additional arguments will be passed along to the internal `:Connect` call.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 NewRemoteFunction(Name: string, OnServerInvoke: Function): RemoteFunction
 ```
 
-```lua [Example]
+```luau [Example]
 NewRemoteFunction(
     "GetUselessNumber",
     function (player) return 6 end

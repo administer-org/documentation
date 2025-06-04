@@ -8,14 +8,14 @@ Spawns a new admin panel for a given user and creates a welcome notification ins
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 AR.Bootstrap(
     Player: Player,
     RankID: number
 )
 ```
 
-```lua [Example]
+```luau [Example]
 game.Players.PlayerAdded:Connect(function(Player))
     if Player.Name == "Roblox" then
         AR.Bootstrap(Player, "Administrator")
@@ -31,18 +31,18 @@ Returns a boolean for if a given player or rank can access an app based on its A
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 AR.CanUseApp(
     Identifier: Player | String<RankName>,
     AppIdentifier: string
 )
 ```
 
-```lua [Example]
+```luau [Example]
 print(`I... {AR.CanUseApp(game.Player.pyxfluff, "PlayerManagement")} use Player Management!`)
 ```
 
-```lua [Output]
+```luau [Output]
 true
 ```
 
@@ -57,7 +57,7 @@ If you are looking to disable double-bootstrap protection, disable `DisableBoots
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 AR.PlayerAdded(
     Player: Player, 
     ForceAdmin: boolean, 
@@ -65,18 +65,18 @@ AR.PlayerAdded(
 )
 ```
 
-```lua [Example]
+```luau [Example]
 game.Players.PlayerAdded:Connect(AR.PlayerAdded)
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "This person is already an admin and by default cannot be bootstrapped twice. Change this in the configuration module."
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     "Done"
@@ -92,11 +92,11 @@ Cleans up after an admin after they leave. Also meant to be a script hook intern
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 AR.Removing(Player: Player)
 ```
 
-```lua [Example]
+```luau [Example]
 game.Players.PlayerRemoving:Connect(AR.Removing)
 ```
 
@@ -108,13 +108,13 @@ Runs [PlayerAdded](#ar-playeradded) on every person in your game. If you would l
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 AR.Scan(
     ForceAdmin: boolean
 )
 ```
 
-```lua [Example]
+```luau [Example]
 game:GetService("MessagingService").MessageRecieved:Connect(Message, Data)
     if Message == "ScanForAdmins" then
         AR.Scan(false)
@@ -130,7 +130,7 @@ Creates a new admin rank with the provided data.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 AR.Ranks.New(Data: {
     AdmRankVersion = 3,
     
@@ -159,7 +159,7 @@ AR.Ranks.New(Data: {
 })
 ```
 
-```lua [Example]
+```luau [Example]
 Admins.Ranks.New({
     AdmRankVersion = 3,
     
@@ -184,14 +184,14 @@ Admins.Ranks.New({
 })
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "Apps was missing in provided table"
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     "Success in 0.073472s!"
@@ -206,15 +206,15 @@ Starts multiple threads to get all ranks in the RankIndex.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 AR.Ranks.GetAll()
 ```
 
-```lua [Example]
+```luau [Example]
 print(AR.Ranks.GetAll())
 ```
 
-```lua [Output]
+```luau [Output]
 {
     {
         Protected = true,
@@ -258,7 +258,7 @@ You shouldn't be using this generally, it is useful for internal Administer code
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 AR.Socket(
     Message: {
         Data: { Message, Content }

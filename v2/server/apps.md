@@ -12,7 +12,7 @@ Contains some properties which may be useful for debugging.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 {
 	ServerAPI = {},
 	InvocationAPI = {},
@@ -28,7 +28,7 @@ Returns a `RichConfig` object. For more information, please refer to the [Invoca
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 Apps.InvocationAPI.RichConfig: {
 		AppMeta: {
 			Name: string,
@@ -57,7 +57,7 @@ Apps.InvocationAPI.RichConfig: {
 	}
 ```
 
-```lua [Example]
+```luau [Example]
 local RichConfig = InvokeAPI.RichConfig()
 
 RichConfig.AppMeta.Name = "Player Management"
@@ -92,22 +92,22 @@ Compile and executes an Administer app.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 InvokeAPI.Construct(Config: RichConfig, MiscData: {...})
 ```
 
-```lua [Example]
+```luau [Example]
 InvokeAPI.Construct(RichConfig, a)
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "this app does not support your administer version. please upgrade to the latest version of Administer."
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     {}
@@ -122,14 +122,14 @@ Loads an app either from its module ID or local location and gives it access to 
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.LoadLocal(
 	Path: number | Instance,
 	AppMeta: { InstallDate: number, InstallSource: string, AppID: number }
 ): Types.Response
 ```
 
-```lua [Example]
+```luau [Example]
 App.LoadLocal(
 	game.ServerScriptService.Administer.LocalApps.PlayerManagement,
 	{ 
@@ -140,12 +140,12 @@ App.LoadLocal(
 ): Types.Response
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 --// This app cannot be loaded as it has failed a test, this is probably due to an outdated Administer version. The server says: {{failure reason}}
 nil
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     {
@@ -175,11 +175,11 @@ Loads the AppDB and loads marketplace apps. This function must be called in orde
 
 ::: code-group
 
-```lua [Example]
+```luau [Example]
 App.Initialize()
 ```
 
-```lua [Output (annotation)]
+```luau [Output (annotation)]
 boolean
 ```
 
@@ -191,22 +191,22 @@ Uninstalls an app based on its asset ID.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.Uninstall(AppID: number)
 ```
 
-```lua [Example]
+```luau [Example]
 App.Uninstall(83492944)
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "Something went wrong."
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     "Done!"
@@ -221,25 +221,25 @@ Gets a list of all apps, depending on the `Source`
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.GetAll(
     "DataStore_Raw" | "Combined" | "Bootstrapped" | nil
 ): {boolean, any}
 ```
 
-```lua [Example]
+```luau [Example]
 local BootstrappedApps = App.GetAll("Bootstrapped")
 local AppsDataStore = App.GetAll("DataStore_Raw")
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "Sourcem ust be of value nil | Bootstrapped | DataStore_Raw | Combined"
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     {...}
@@ -256,7 +256,7 @@ AppName parameter exists for displaying in the UI for unauthorized users in the 
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.Install(
     AppID: number,
     InstallContext: string,
@@ -264,7 +264,7 @@ App.Install(
 ): {boolean, string}
 ```
 
-```lua [Example]
+```luau [Example]
 local Result = App.Install(
     133017837,
     "AppMarketplace/2.0",
@@ -272,14 +272,14 @@ local Result = App.Install(
 )
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "This app is a duplicate."
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     "Installation completed!"
@@ -296,28 +296,28 @@ The AOS Instance must be online because Administer will attempt to reach `/pub/.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.new(
     URL: string,
     ActingUser: int
 )
 ```
 
-```lua [Example]
+```luau [Example]
 App.ServerAPI.new(
     "https://aos-eur-1.admsoftware.org",
     133017837
 )
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "Something went wrong, please check the logs."
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     "Done!"
@@ -332,7 +332,7 @@ Gets a list of Assets from all installed AOS instances. You may also specify a s
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.GetList(
     SpecificServer: string,
     Area: string --// Generally "Themes", "Featured", or "Apps"
@@ -358,7 +358,7 @@ App.ServerAPI.GetList(
     }
 ```
 
-```lua [Example]
+```luau [Example]
 local AppList = App.ServerAPI.GetList(nil, "Featured")
 
 for _, App in AppList["https://aos-canary.admsoftware.org"] do
@@ -366,7 +366,7 @@ for _, App in AppList["https://aos-canary.admsoftware.org"] do
 end
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     ["https://aos-canary.admsoftware.org"] = {
         false,
@@ -375,7 +375,7 @@ end
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     ["https://aos-canary.admsoftware.org"] =  {
         [1] = {
@@ -410,26 +410,26 @@ Registers an AOS Node as it's primary. This is generally used for our production
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.RegisterPrimary(
     URL: string
 )
 ```
 
-```lua [Example]
+```luau [Example]
 App.ServerAPI.ReigsterPrimary(
     "https://aos-eur-1.admsoftware.org"
 )
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "Something went wrong."
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     "Done!"
@@ -444,11 +444,11 @@ Gets the status of every installed AOS node.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.GetServerStatuses()
 ```
 
-```lua [Example]
+```luau [Example]
 local Statuses = App.ServerAPI.GetServerStatuses()
 
 for i, Data in Statuses do
@@ -456,7 +456,7 @@ for i, Data in Statuses do
 end
 ```
 
-```lua [Output]
+```luau [Output]
 {
     true,
     {
@@ -483,27 +483,27 @@ Removes a server from the game's index. Does not unregister as primary on the ba
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.UninstallServer(
     ServerURL: string,
     IsStatic: boolean
 )
 ```
 
-```lua [Example]
+```luau [Example]
 App.ServerAPI.UninstallServer(
     "https://aos-us-3.admsoftware.org"
 )
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "This app server does not appear to be installed."
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     "Done!"
@@ -518,14 +518,14 @@ Gets detailed information on a specific app from its server.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.GetApp(
     AppServer: string,
     AppID: string
 )
 ```
 
-```lua [Example]
+```luau [Example]
 local App = App.ServerAPI.GetApp(
     "https://aos-us-3.admsoftware.org",
     "org.admsoftware.Reporter
@@ -534,7 +534,7 @@ local App = App.ServerAPI.GetApp(
 print(App[2].Name)
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     418,
@@ -546,7 +546,7 @@ print(App[2].Name)
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     {
@@ -590,28 +590,28 @@ Installs an app from it's AOSId2 and server URL.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.InstallFromServer(
     ServerURL: string,
     AppID: string
 )
 ```
 
-```lua [Example]
+```luau [Example]
 App.ServerAPI.InstallFromServer(
     "https://aos-us-3.admsoftware.org",
     "org.admsoftware.player-management.Main"
 )
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     "Sorry, but this app could not be installed. Server returned error: 400 (You may not install an app twice.)"
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     "Done!"
@@ -626,7 +626,7 @@ Allows you to like or dislike an app. 1 = like, 2 = favorite, 0 = dislike. Outpu
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.Vote(
     ServerURL: string,
     AppID: string,
@@ -634,7 +634,7 @@ App.ServerAPI.Vote(
 )
 ```
 
-```lua [Example]
+```luau [Example]
 App.ServerAPI.Vote(
     "https://aos-us-3.admsoftware.org",
     "org.admsoftware.player-management.Main",
@@ -650,17 +650,17 @@ Gets currently active official AOS nodes from https://gateway.admsoftware.org an
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.GetAOSInstances(
     DoStatusChecks: boolean
 )
 ```
 
-```lua [Example]
+```luau [Example]
 local Instances = App.ServerAPI.GetAOSInstances(true)
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     {
             name = "Canary"
@@ -680,14 +680,14 @@ Performs an API RichSearch.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.Search(
     ServerURL: string,
     Query: string
 )
 ```
 
-```lua [Example]
+```luau [Example]
 local Results = App.ServerAPI.Search(
     "https://aos-us-3.admsoftware.org",
     "Panel"
@@ -696,7 +696,7 @@ local Results = App.ServerAPI.Search(
 print(Results)
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     400,
@@ -708,7 +708,7 @@ print(Results)
 }
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     {
@@ -725,17 +725,17 @@ Returns the total amount of app servers and running apps.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 App.ServerAPI.GetTotals()
 ```
 
-```lua [Example]
+```luau [Example]
 local Totals = App.ServerAPI.GetTotals()
 
 print(`{Totals.Servers} app server(s) are installed and {Totals.Apps} are running!`)
 ```
 
-```lua [Output]
+```luau [Output]
 {
     Servers = 1,
     Apps = 4

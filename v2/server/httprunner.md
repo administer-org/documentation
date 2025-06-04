@@ -7,7 +7,7 @@ Various HTTPService wrappers for ease of use.
 RequestAsync GET wrapper. Returns the output of OnOK or OnError.
 
 ::: code-group
-```lua [Annotation]
+```luau [Annotation]
 Http.GetRoute(
     URL: string,
     Path: string,
@@ -16,7 +16,7 @@ Http.GetRoute(
 )
 ```
 
-```lua [Example]
+```luau [Example]
 HTTP.GetRoute("https://gateway.admsoftware.org", `/`, function(Content, ...)
     print("URLs:", game:GetService("HttpService":JSONDecode(Content))
 
@@ -35,7 +35,7 @@ RequestAsync POST wrapper. Appends `X-Administer-Version` to the request headers
 Returns the output of OnOK or OnError.
 
 ::: code-group
-```lua [Annotation]
+```luau [Annotation]
 Http.PostRoute(
     URL: string,
     Path: string,
@@ -47,7 +47,7 @@ Http.PostRoute(
 )
 ```
 
-```lua [Example]
+```luau [Example]
 return HTTP.PostRoute(URL, "/api/register-home-node", {}, function(Data, Info)
     Utils.Logging.Print("Registered!", Data)
     
@@ -68,11 +68,11 @@ end)
 Returns a `HttpService:GenerateGUID(false)` call. Exists for code clarity.
 
 ::: code-group
-```lua [Annotation]
+```luau [Annotation]
 Http.GUID()
 ```
 
-```lua [Example]
+```luau [Example]
 local UniqueID = Http.GUID()
 
 print(UniqueID)

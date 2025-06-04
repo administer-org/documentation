@@ -25,7 +25,7 @@ Main Module (ModuleScript)/
 ```
 
 Inside the Main Module, you should return a Table with both an `OnDownload` and `Init` method, like so:
-```lua
+```luau
 return {
     Init = function ()
         script.Test.Parent = game.ServerScriptService.Administer.Apps
@@ -40,14 +40,14 @@ return {
 ## Example application
 
 Before you can create an app, you'll need an app configuration:
-```lua
+```luau
 local AppConfig = {
     -- This is reserved for future releases
 }
 ```
 
 Afterwards, you should [build your application](./namespace/app.md#app-build) like so:
-```lua
+```luau
 App.Build(
     function (config, built)
         print("This is our app config:", config)

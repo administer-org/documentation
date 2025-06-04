@@ -20,7 +20,7 @@ MainModule (ModuleScript)/
 Inside your MainModule, you should return an [InvocationAPI Object](../apps/types/invocation-api.md). For more in-depth information, see that, but for the sake of simplicity we are going to only include the basic here.
 
 First, include the [Types](../apps/types/typesapi) module to help you out, and then return a basic function with the invocation API and [required internal data](../apps/help/extra-data):
-```lua
+```luau
 local Types = require(script.Parent.Parent.Core.Types)
 
 return function(InvokeAPI: Types.InvocationAPI, RequiredData)
@@ -34,7 +34,7 @@ Everything in this section will be small portions of otherwise bigger concepts f
 
 Now, inside of that function, you can create a new [RichConfig](../apps/types/richconfig) object and ask for the InvocationAPI to build it, like so:
 
-```lua
+```luau
 local RichConfig = InvokeAPI.RichConfig()
 
 --// This is where your app config will be
@@ -44,7 +44,7 @@ return InvokeAPI.Construct(RichConfig, RequiredData)
 
 Your MainModule should now look like this.
 
-```lua
+```luau
 local Types = require(script.Parent.Parent.Core.Types)
 
 return function(InvokeAPI: Types.InvocationAPI, RequiredData)
@@ -63,7 +63,7 @@ The [RichConfig](../apps/types/richconfig) is a useful tool for developing for A
 ### Meta
 The Meta section includes your app's metadata, such as its name, display name, creator, and icon. With our `RichConfig` we created in Section I...
 
-```lua
+```luau
 RichConfig.AppMeta.Name = "Test App" --// The name shown in UI
 RichConfig.AppMeta.DisplayName = "App" --// The name shown in the app sidebar
 RichConfig.AppMeta.Description = "This is a test app for the 2.0 API!" --// The description shown on hover and in the App Library
@@ -82,7 +82,7 @@ Specifying what versions work with your app take structured strings under the fo
 
 `AdministerModules` takes a list of what server and client modules you would like to have passed to your compiled app. They must be an [Administer Module](../apps/types/module.md).
 
-```lua
+```luau
 RichConfig.Dependencies.AppPlatform = "min:2.0.0;max:5.0.0"
 RichConfig.Dependencies.Administer = "min:2.0.0;max:2.1.0"
 RichConfig.Dependencies.SettingsAPI = "min:2.0.0;max:2.0.0"

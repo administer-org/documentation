@@ -7,11 +7,11 @@ Import from other admin systems.
 A table of supported imports.
 
 ::: code-group
-```lua [Annotation]
+```luau [Annotation]
 Importer.Systems: { string }
 ```
 
-```lua [Example]
+```luau [Example]
 local Systems = Importer.Systems
 
 if table.find(Systems, "EXE_6") == nil then
@@ -26,17 +26,17 @@ end
 Returns a serialized list of everything found from a given system.
 
 ::: code-group
-```lua [Annotation]
+```luau [Annotation]
 Importer.GetData(
     SystemName: string
 )
 ```
 
-```lua [Example]
+```luau [Example]
 Importer.GetData("HD_ADMIN")
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     {
@@ -55,7 +55,7 @@ Importer.GetData("HD_ADMIN")
 }
 ```
 
-```lua [Output (error)]
+```luau [Output (error)]
 {
     false,
     "The requested system was either not found or is not installed."
@@ -69,11 +69,11 @@ Importer.GetData("HD_ADMIN")
 Gets a list of installed admin systems and returns how many commands, ranks, and admins they have.
 
 ::: code-group
-```lua [Annotation]
+```luau [Annotation]
 Importer.ListFoundSystems()
 ```
 
-```lua [Example]
+```luau [Example]
 print(Importer.ListFoundSystems.HD_ADMIN)
 ```
 
@@ -88,25 +88,25 @@ This function is not finished and does not work.
 :::
 
 ::: code-group
-```lua [Annotation]
+```luau [Annotation]
 Importer.Import(
     SystemName: string
 )
 ```
 
-```lua [Example]
+```luau [Example]
 Importer.Import(
     "HD_ADMIN"
 )
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     true,
     "Done!"
 ```
 
-```lua [Output (error)]
+```luau [Output (error)]
 {
     false,
     "The requested system was either not found or is not installed."

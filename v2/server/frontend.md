@@ -8,24 +8,24 @@ Performs an Administer version check based on your default AOS URL `/pub/version
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 FrontendAPI.VersionCheck(
     Player: Player
 )
 ```
 
-```lua [Example]
+```luau [Example]
 FrontendAPI.VersionCheck(game.Players.pyxfluff)
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     provided_information: {any},
     versions: {any}
 }
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     false,
     {...}
@@ -39,7 +39,7 @@ FrontendAPI.VersionCheck(game.Players.pyxfluff)
 Updates the saved widgets for a given player.
 
 ::: code-group
-```lua [Annotation]
+```luau [Annotation]
 FrontendAPI.UpdateHomePage(
     Player: Player,
     NewData: {
@@ -50,7 +50,7 @@ FrontendAPI.UpdateHomePage(
 )
 ```
 
-```lua [Example]
+```luau [Example]
 FrontendAPI.UpdateHomePage(
     game.Players.pyxfluff,
     {
@@ -61,14 +61,14 @@ FrontendAPI.UpdateHomePage(
 )
 ```
 
-```lua [Output (success)]
+```luau [Output (success)]
 {
     Success = true,
     Message = "Done!"
 }
 ```
 
-```lua [Output (failure)]
+```luau [Output (failure)]
 {
     Success = false,
     Message = "Something happened on Roblox's end, please try again later."

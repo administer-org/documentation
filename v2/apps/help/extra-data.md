@@ -7,14 +7,14 @@ It generally does not do anything for app developers, it only returns data usefu
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 ExtraData: {
     RunContext: "LocalAppsFolder" | "AOSDownload", --// This tells you where Administer pulled your app from, either locally, or via an app server,
     TechID: number | Instance --// This is the ID that was used to pull the app if it was retrieved via the cloud, or the module location if it was pulled from the LocalApps folder.
 }
 ```
 
-```lua [Example]
+```luau [Example]
 {
     RunContext = "AOSDownload",
     TechID = 2843845290

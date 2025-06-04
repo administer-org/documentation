@@ -113,6 +113,8 @@ export default defineConfig({
                             { text: 'FrontendAPI', link: '/v2/server/frontend' },
                             { text: 'HttpRunner', link: '/v2/server/httprunner' },
                             { text: 'External Importer', link: '/v2/server/importer' },
+                            { text: 'Settings', link: '/v2/server/settings' },
+                            { text: 'Utilities', link: '/v2/server/utilities' },
                         ]
                     }
                 ]

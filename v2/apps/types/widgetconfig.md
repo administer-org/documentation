@@ -18,7 +18,7 @@ After you have that, you can set up your widgets for client use.
 
 A simple string to specify what your widgets are made for. For now, you can have something like this:
 
-```lua
+```luau
 ["_generator"] = "AdministerWidgetConfig-1.0"
 ```
 
@@ -26,11 +26,11 @@ If you would like to add extra metadata, this is the place. Just make sure to ad
 
 ::: code-group
 
-```lua [Template]
+```luau [Template]
 ["_generator"] = "AdministerWidgetConfig-WIDGET_CONFIG_VERS-EXTRA_META"
 ```
 
-```lua [Example]
+```luau [Example]
 ["_generator"] = "AdministerWidgetConfig-1.0-Made by @pyxfluff (2024)"
 ```
 
@@ -62,7 +62,7 @@ A small label on the homepage.
 
 ::: code-group
 
-```lua [Type annotations]
+```luau [Type annotations]
 {
     Type = "SMALL_LABEL",
 	RenderFrequency: number,
@@ -75,7 +75,7 @@ A small label on the homepage.
 }
 ```
 
-```lua [Example]
+```luau [Example]
 local PassedSeconds = 0
 
 --// ...
@@ -108,7 +108,7 @@ A large box on the homescreen.
 
 ::: code-group
 
-```lua [Type annotations]
+```luau [Type annotations]
 {
     Type = "LARGE_BOX",
 
@@ -120,7 +120,7 @@ A large box on the homescreen.
 }
 ```
 
-```lua [Example]
+```luau [Example]
 {
 	["Type"] = "LARGE_BOX",
 
@@ -148,7 +148,7 @@ This is reserved for a future update. The API is complete and will probably be c
 :::
 
 
-```lua [Example]
+```luau [Example]
 ["Moderation+_Ban"] = {
 			["ActionName"] = "Ban",
 			["Description"] = "Ban a set of users.",

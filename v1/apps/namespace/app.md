@@ -10,11 +10,11 @@ Sets Administer's parent frame for adding buttons and notifications.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 ActivateUI(UI: Frame): nil
 ```
 
-```lua [Example]
+```luau [Example]
 ActivateUI(script.Parent)
 ```
 
@@ -27,11 +27,11 @@ Activates the specified Application UI, will create the `AdministerApps` folder 
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 Build(OnBuild: Function, AppConfig: Table, AppButton: Table): nil
 ```
 
-```lua [Example]
+```luau [Example]
 Build(
     function (AppConfig, BuiltAPI)
         print(AppConfig, BuiltAPI)
@@ -51,7 +51,7 @@ Build(
 :::
 
 Build the specified app using the given `AppConfig`, will run `OnBuild` after building as follows:
-```lua
+```luau
 local function OnBuild(AppConfig, BuiltAPI)
     -- AppConfig will be the same as you specified in `App.Build`
 end
@@ -71,7 +71,7 @@ Settings may be tweaked based on user input.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 {
     BuildTime:          number,  --// The time it took to extract and run your app
     TempLinkID:         GUID,    --// The ID Administer uses to link your button to the frame.
@@ -98,7 +98,7 @@ A standard Administer setting entry, usually part of a larger `Settings` scheme.
 
 ::: code-group
 
-```lua [Annotation]
+```luau [Annotation]
 [SettingName: string] = {
     DisplayName:     string                                                               --// Optionally, display a name which is different to SettingName.
     Type:            string "NumberRange" | "Boolean" | "String" | "KeyCode" | "Dropdown" --// The type of setting.
