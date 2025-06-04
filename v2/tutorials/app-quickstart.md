@@ -19,7 +19,7 @@ MainModule (ModuleScript)/
 
 Inside your MainModule, you should return an [InvocationAPI Object](../apps/types/invocation-api.md). For more in-depth information, see that, but for the sake of simplicity we are going to only include the basic here.
 
-First, include the [Types](../apps/types/typesapi) module to help you out, and then return a basic function with the invocation API and [required internal data](../apps/help/extra-data):
+First, include the [Types](/v2/apps/types/typesapi) module to help you out, and then return a basic function with the invocation API and [required internal data](../apps/help/extra-data):
 ```luau
 local Types = require(script.Parent.Parent.Core.Types)
 

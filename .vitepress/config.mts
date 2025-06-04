@@ -88,7 +88,9 @@ export default defineConfig({
                         collapsible: true,
                         collapsed: true,
                         items: [
-                            { text: 'extra-data', link: '/v2/apps/help/extra-data' }
+                            { text: 'extra-data', link: '/v2/help/extra-data' },
+                            { text: 'Translation Keys', link: '/v2/help/translation-keys' },
+                            { text: 'Icon Packs', link: '/v2/help/icon-packs' }
                         ]
                     },
                     {
