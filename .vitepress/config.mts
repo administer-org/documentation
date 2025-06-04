@@ -111,6 +111,8 @@ export default defineConfig({
                             { text: 'AdminRunner', link: '/v2/server/adminrunner' },
                             { text: 'Debugging', link: '/v2/server/debugging' },
                             { text: 'FrontendAPI', link: '/v2/server/frontend' },
+                            { text: 'HttpRunner', link: '/v2/server/httprunner' },
+                            { text: 'External Importer', link: '/v2/server/importer' },
                         ]
                     }
                 ]
