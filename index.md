@@ -10,11 +10,17 @@ hero:
       text: Get Started
       link: /quickstart/installation
     - theme: alt
-      text: About Administer
-      link: /meta/about-administer
+      text: v2 API
+      link: /v2/about
+    - theme: alt
+      text: v1 API
+      link: /v1/apps/quickstart
+    - theme: alt
+      text: AOS Information
+      link: /AOS/information/about
   image:
     src: https://github.com/administer-org/.github/blob/main/profile/CnP_02042025_235822.png?raw=true
-    alt: "Administer Logo"
+    alt: "Administer"
 
 features:
   - icon: 🛠️
@@ -29,9 +35,3 @@ features:
 ---
 
 <br>
-
-::: warning WELCOME TO THE 2.0 API TESTING SITE!
-
-The 2.0.0 documentation is still actively being worked on and is highly subject to change as Administer 2.0.0 continues development. Please do not base any code off of 2.0 APIs until we finalize the API.
-
-:::

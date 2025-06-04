@@ -110,6 +110,7 @@ export default defineConfig({
                             { text: 'Apps', link: '/v2/server/apps' },
                             { text: 'AdminRunner', link: '/v2/server/adminrunner' },
                             { text: 'Debugging', link: '/v2/server/debugging' },
+                            { text: 'FrontendAPI', link: '/v2/server/frontend' },
                         ]
                     }
                 ]
