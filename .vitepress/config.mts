@@ -80,7 +80,7 @@ export default defineConfig({
             {
                 text: 'Administer API',
                 collapsible: true,
-                collapsed: true,
+                collapsed: false,
                 items: [
                     { text: 'Quickstart Guide', link: '/v2/tutorials/app-quickstart' },
                     {
@@ -107,7 +107,7 @@ export default defineConfig({
                      {
                         text: 'Server Modules',
                         collapsible: true,
-                        collapsed: true,
+                        collapsed: false,
                         items: [
                             { text: 'Apps', link: '/v2/server/apps' },
                             { text: 'AdminRunner', link: '/v2/server/adminrunner' },
@@ -124,7 +124,7 @@ export default defineConfig({
             {
                 text: 'AOS',
                 collapsible: true,
-                collapsed: true,
+                collapsed: false,
                 items: [
                     {
                         text: 'API Reference',
