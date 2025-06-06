@@ -9,16 +9,16 @@ export default defineConfig({
 
     head: [
         [
-            "link", 
-            { 
-                rel: "icon", 
-                href: "/logo.png" 
+            "link",
+            {
+                rel: "icon",
+                href: "/logo.png"
             }
         ],
         [
-            "meta", 
-            { 
-                name: "darkreader-lock" 
+            "meta",
+            {
+                name: "darkreader-lock"
             }
         ],
         [
@@ -35,6 +35,12 @@ export default defineConfig({
             `window.plausible = window.plausible || function() {
         (window.plausible.q = window.plausible.q || []).push(arguments)
       }`
+        ],
+        [
+            "script",
+            {
+                src: "/logPageView.js"
+            },
         ]
     ],
 
