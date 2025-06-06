@@ -104,11 +104,19 @@ export default defineConfig({
                             { text: 'widgetconfig', link: '/v2/apps/types/widgetconfig' }
                         ]
                     },
-                     {
+                    {
                         text: 'Server Modules',
                         collapsible: true,
                         collapsed: false,
                         items: [
+                            {
+                                text: 'Helpers',
+                                collapsible: true,
+                                collapsed: true,
+                                items: [
+                                    { text: 'V1 Migrator', link: '/v2/server/helpers/v1migrator' },
+                                ]
+                            },
                             { text: 'Apps', link: '/v2/server/apps' },
                             { text: 'AdminRunner', link: '/v2/server/adminrunner' },
                             { text: 'Debugging', link: '/v2/server/debugging' },
