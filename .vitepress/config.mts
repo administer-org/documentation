@@ -143,10 +143,10 @@ export default defineConfig({
                         collapsible: true,
                         collapsed: true,
                         items: [
-                            { text: 'builtapi', link: '/v2/apps/types/builtapi' },
-                            { text: 'invocation-api', link: '/v2/apps/types/invocation-api' },
-                            { text: 'richconfig', link: '/v2/apps/types/richconfig' },
-                            { text: 'widgetconfig', link: '/v2/apps/types/widgetconfig' }
+                            { text: 'AppModule', link: '/v2/apps/types/module' },
+                            { text: 'InvocationAPI', link: '/v2/apps/types/invocation-api' },
+                            { text: 'RichConfig', link: '/v2/apps/types/richconfig' },
+                            { text: 'WidgetConfig', link: '/v2/apps/types/widgetconfig' }
                         ]
                     },
                     {
