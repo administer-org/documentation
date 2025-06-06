@@ -11,7 +11,7 @@ export default defineConfig({
         ["link", { rel: "icon", href: "/logo.png" }],
         ["meta", { name: "darkreader-lock" }]
     ],
-    
+
     ignoreDeadLinks: true,
     cleanUrls: true,
     lastUpdated: true,
@@ -22,6 +22,14 @@ export default defineConfig({
 
     themeConfig: {
         logo: "https://github.com/administer-org/.github/blob/main/profile/CnP_02042025_235822.png?raw=true",
+
+        search: {
+            provider: "local"
+        },
+
+        editLink: {
+            pattern: "https://github.com/administer-org/documentation/edit/gh-pages/:path"
+        },
 
         socialLinks: [
             { icon: "github", link: "https://github.com/administer-org" },
@@ -50,6 +58,7 @@ export default defineConfig({
                 items: [
                     { text: 'About Administer', link: '/meta/about-administer' },
                     { text: 'Donations and Contributions', link: '/meta/donation-contribution' },
+                    { text: 'Docs issues & Contributions', link: '/meta/issues' },
                     { text: 'Contact Us', link: '/meta/contact' },
                     {
                         text: 'Getting Started',
@@ -165,6 +174,5 @@ export default defineConfig({
                 ]
             }
         ]
-
     }
 });
