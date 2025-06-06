@@ -58,7 +58,7 @@ You are now ready for the next portion!
 
 ## Section II: RichConfig
 
-The [RichConfig](../apps/types/richconfig) is a useful tool for developing for Administer. It determines how end users see your app and how Administer treats it.
+The [RichConfig](/v2/apps/types/richconfig) is a useful tool for developing for Administer. It determines how end users see your app and how Administer treats it.
 
 ### Meta
 The Meta section includes your app's metadata, such as its name, display name, creator, and icon. With our `RichConfig` we created in Section I...
@@ -105,3 +105,6 @@ With the RichConfig done, you are now ready to tell Administer what to do when t
 If you followed the [structure](app-quickstart#section-i-basic-setup-structure) from earlier, you should have a folder with another module. You can pass that module's function (or any other for that matter) through.
 
 It returns three parameters but for the sake of simplicity we do not go into those here. Please refer to the [Bootstrap API.](../apps/types/richconfig.md#bootstrap)
+
+
+Now that you have a working server app, you're ready to [bring it to the client!](/v2/tutorials/client-quickstart.md)

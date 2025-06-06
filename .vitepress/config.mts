@@ -6,16 +6,20 @@ export default defineConfig({
     titleTemplate: ":title · Documentation",
     description: "API documentation for Administer, Administer AOS, Apps. Learn how to make an app, use web APIs, or contribute to Administer.",
     lang: "en-US",
+
     head: [
         ["link", { rel: "icon", href: "/logo.png" }],
         ["meta", { name: "darkreader-lock" }]
     ],
+    
     ignoreDeadLinks: true,
     cleanUrls: true,
     lastUpdated: true,
+
     sitemap: {
         hostname: "https://docs.admsoftware.org",
     },
+
     themeConfig: {
         logo: "https://github.com/administer-org/.github/blob/main/profile/CnP_02042025_235822.png?raw=true",
 
