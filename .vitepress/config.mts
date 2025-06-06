@@ -115,6 +115,8 @@ export default defineConfig({
                                 collapsed: true,
                                 items: [
                                     { text: 'V1 Migrator', link: '/v2/server/helpers/v1migrator' },
+                                    { text: 'Bootstrapper', link: '/v2/server/helpers/bootstrap' },
+                                    { text: 'ParseCommand', link: '/v2/server/helpers/ParseCommand' },
                                 ]
                             },
                             { text: 'Apps', link: '/v2/server/apps' },
@@ -124,7 +126,7 @@ export default defineConfig({
                             { text: 'HttpRunner', link: '/v2/server/httprunner' },
                             { text: 'External Importer', link: '/v2/server/importer' },
                             { text: 'Settings', link: '/v2/server/settings' },
-                            { text: 'Utilities', link: '/v2/server/utilities' },
+                            { text: 'Utilities', link: '/v2/server/utilities' }
                         ]
                     }
                 ]
