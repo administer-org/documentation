@@ -8,8 +8,34 @@ export default defineConfig({
     lang: "en-US",
 
     head: [
-        ["link", { rel: "icon", href: "/logo.png" }],
-        ["meta", { name: "darkreader-lock" }]
+        [
+            "link", 
+            { 
+                rel: "icon", 
+                href: "/logo.png" 
+            }
+        ],
+        [
+            "meta", 
+            { 
+                name: "darkreader-lock" 
+            }
+        ],
+        [
+            'script',
+            {
+                defer: '',
+                'data-domain': 'docs.admsoftware.org',
+                src: 'https://plausible.admsoftware.org/js/script.file-downloads.hash.outbound-links.js',
+            },
+        ],
+        [
+            'script',
+            {},
+            `window.plausible = window.plausible || function() {
+        (window.plausible.q = window.plausible.q || []).push(arguments)
+      }`
+        ]
     ],
 
     ignoreDeadLinks: true,
