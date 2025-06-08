@@ -4,12 +4,14 @@ AOS is a lightweight Python program, so it does not take very much to run. As of
 
 Because of that, we recommend the following to be reserved for **just AOS and a lightweight operating system (arch)** in applications such as Proxmox LXC containers:
 
-| Resource    | Recommended | Minimum | Notes                                                                                  |
-|-------------|-------------|---------|----------------------------------------------------------------------------------------|
-| CPU Threads | 2           | 1       | This will greatly depend on your expected traffic                                      |
-| Memory      | 1GB         | 512MB   | Depends on your host OS, AOS Plugins, and server lifespan                              |
-| Disk space  | 4GB         | 2GB     | Depends on your host & log retention. AOS will not use over 512mb                      |
-| Network     | 100MB/s     | N/A     | All official AOS nodes have gigabit uplinks. Try not to throttle machines if possible. |
+| Resource    | Recommended | Minimum | Notes                                                                                                |
+|-------------|-------------|---------|------------------------------------------------------------------------------------------------------|
+| CPU Threads | 2           | 1       | This will greatly depend on your expected traffic. If your AOS is clustered, you won't need as much. |
+| Memory      | 1GB         | 512MB   | Depends on your host OS, AOS Plugins, and server lifespan                                            |
+| Disk space  | 4GB         | 2GB     | Depends on your host & log retention. AOS will not use over 512mb by itself.                         |
+| Network     | 100MB/s     | N/A     | All official AOS nodes have gigabit uplinks. Try not to throttle machines if possible.               |
 
 
 Please note that you may need to increase resource availability during the install process to ensure uv can write packages in a timely manner.
+
+These recommendations will change if you are using a shared machine or a heavier OS (ubuntu).

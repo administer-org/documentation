@@ -161,7 +161,16 @@ export default defineConfig({
                                 items: [
                                     { text: 'V1 Migrator', link: '/v2/server/helpers/v1migrator' },
                                     { text: 'Bootstrapper', link: '/v2/server/helpers/bootstrap' },
-                                    { text: 'ParseCommand', link: '/v2/server/helpers/ParseCommand' },
+                                    { text: 'ParseCommand', link: '/v2/server/helpers/ParseCommand' }
+                                ]
+                            },
+                            {
+                                text: 'Core Modules',
+                                collapsible: true,
+                                collapsed: true,
+                                items: [
+                                    { text: 'Variables', link: '/v2/server/core/vars' },
+                                    { text: 'Config', link: '/v2/server/core/config' }
                                 ]
                             },
                             { text: 'Apps', link: '/v2/server/apps' },
