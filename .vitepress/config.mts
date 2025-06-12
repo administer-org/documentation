@@ -127,7 +127,8 @@ export default defineConfig({
                 collapsible: true,
                 collapsed: false,
                 items: [
-                    { text: 'Quickstart Guide', link: '/v2/tutorials/app-quickstart' },
+                    { text: 'Quickstart Guide - Basics', link: '/v2/tutorials/app-quickstart' },
+                    { text: 'Quickstart Guide - Client APIs', link: '/v2/tutorials/client-quickstart' },
                     {
                         text: 'Help',
                         collapsible: true,
@@ -182,7 +183,17 @@ export default defineConfig({
                             { text: 'Settings', link: '/v2/server/settings' },
                             { text: 'Utilities', link: '/v2/server/utilities' }
                         ]
-                    }
+                    },
+                    {
+                        text: 'Client Modules',
+                        collapsible: true,
+                        collapsed: true,
+                        items: [
+                            { text: 'Admins', link: '/v2/client/admins' },
+                            { text: 'Apps', link: '/v2/client/apps' },
+                            { text: 'Frontend', link: '/v2/client/frontend' },
+                        ]
+                    },
                 ]
             },
             {
