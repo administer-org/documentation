@@ -1,7 +1,7 @@
 # Installation
 
 ::: info
-When using Administer, it is highly reconmended to join our [discord server](https://discord.gg/c8dC4k3J5Y) for support, announcements, developer updates and more!
+When using Administer, it is highly recommended to join our [discord server](https://to.admsoftware.org/discord) for support, announcements, developer updates and more!
 :::
 
 Administer is ready to go out of the box.<br>

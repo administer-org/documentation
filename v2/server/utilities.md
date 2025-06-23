@@ -125,7 +125,7 @@ This function yields until it is closed or the user interacts with it. You may w
 Utilities.NewNotification(
     Admin: Player,
     Body: string,
-    Title: strig,
+    Title: string,
     Icon: string,
     Duration: number,
     NotificationSound: string,

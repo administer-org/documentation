@@ -102,7 +102,7 @@ RichConfig.Dependencies.Administer = "2.0.0"
 
 ## Bootstrap
 
-This is the function that Administer provides data with to initiailze your app. 
+This is the function that Administer provides data with to initialize your app. 
 
 ::: code-group
 ```luau [Annotation]

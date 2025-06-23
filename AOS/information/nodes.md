@@ -14,7 +14,7 @@ No, the production database is private and may not be accessed by your own serve
 
 ----
 
-*For programmaticly accessing a list of AOS instances, please do not scrape from the docs. Instead, we provide a JSON API that you can use at https://gateway.admsoftware.org.*
+*For programmatically accessing a list of AOS instances, please do not scrape from the docs. Instead, we provide a JSON API that you can use at https://gateway.admsoftware.org.*
 
 ---
 

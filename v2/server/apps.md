@@ -118,7 +118,7 @@ InvokeAPI.Construct(RichConfig, a)
 
 ## `App.LoadLocal`
 
-Loads an app either from its module ID or local location and gives it access to the InovcationAPI required to execute the app.
+Loads an app either from its module ID or local location and gives it access to the InvocationAPI required to execute the app.
 
 ::: code-group
 
@@ -235,7 +235,7 @@ local AppsDataStore = App.GetAll("DataStore_Raw")
 ```luau [Output (failure)]
 {
     false,
-    "Sourcem ust be of value nil | Bootstrapped | DataStore_Raw | Combined"
+    "Source must be of value nil | Bootstrapped | DataStore_Raw | Combined"
 }
 ```
 
@@ -292,7 +292,7 @@ local Result = App.Install(
 
 Installs an AOS instance and performs checks on it. 
 
-The AOS Instance must be online because Administer will attempt to reach `/pub/.administer`, which should return techincal data, specifically `{server: "AdministerAppServer"}`, which is what Administer uses to verify it is a valid AOS instance. You can see an example of what data it returns [here.](https://aos-canary.admsoftware.org/pub/.administer)
+The AOS Instance must be online because Administer will attempt to reach `/pub/.administer`, which should return technical data, specifically `{server: "AdministerAppServer"}`, which is what Administer uses to verify it is a valid AOS instance. You can see an example of what data it returns [here.](https://aos-canary.admsoftware.org/pub/.administer)
 
 ::: code-group
 
@@ -417,7 +417,7 @@ App.ServerAPI.RegisterPrimary(
 ```
 
 ```luau [Example]
-App.ServerAPI.ReigsterPrimary(
+App.ServerAPI.RegisterPrimary(
     "https://aos-eur-1.admsoftware.org"
 )
 ```
@@ -599,7 +599,7 @@ App.ServerAPI.InstallFromServer(
 
 ```luau [Example]
 App.ServerAPI.InstallFromServer(
-    "https://aos-us-3.admsoftware.org",
+    "https://aos-us-1.admsoftware.org",
     "org.admsoftware.player-management.Main"
 )
 ```

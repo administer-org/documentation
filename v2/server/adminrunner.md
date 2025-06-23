@@ -1,6 +1,6 @@
 # AdminRunner
 
-AdminRunns has many functions and utilities for manging admins.
+AdminRunner has many functions and utilities for managing admins.
 
 ## `AR.Bootstrap`
 
@@ -115,7 +115,7 @@ AR.Scan(
 ```
 
 ```luau [Example]
-game:GetService("MessagingService").MessageRecieved:Connect(Message, Data)
+game:GetService("MessagingService").MessageReceived:Connect(Message, Data)
     if Message == "ScanForAdmins" then
         AR.Scan(false)
     end

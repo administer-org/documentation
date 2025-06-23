@@ -20,7 +20,7 @@ Python is required for AOS because it's what our tech stack runs off. You do not
 
 You can find the MongoDB 8 install guide here: https://www.mongodb.com/docs/manual/installation/
 
-For production, we recommend adding a user to your database and making note of the key for setting up your `._config.json` file later. **ENSURE MONGO IS FIREWALLED AND CANNOT BE REACHED OUTSIDE OF YOUR LAN!!** If you don't you are asking for expliots and ransom!
+For production, we recommend adding a user to your database and making note of the key for setting up your `._config.json` file later. **ENSURE MONGO IS FIREWALLED AND CANNOT BE REACHED OUTSIDE OF YOUR LAN!!** If you don't you are asking for exploits and ransom!
 
 
 ## Install
@@ -58,7 +58,7 @@ macOS and Windows are not QA tested because we do not develop with either in min
 Commands will generally differ based on what operating system you are using.
 :::
 
-The steps will differ a little bit but generaly they should folow these steps:
+The steps will differ a little bit but generally they should follow these steps:
 
 1. Install uv:
 ```sh
@@ -83,7 +83,7 @@ python3 -m AOS database genkeys
 ```
 5. Initialize logging
 ```sh
-# This will work on macOS but not Windows.
+# This will work on macOS (& linux obviously) but not Windows.
 sudo mkdir /etc/adm
 sudo touch /etc/adm/log
 sudo chmod 7777 /etc/adm /etc/adm/log
@@ -94,7 +94,7 @@ python3 -m AOS
 python3 -m AOS core serve
 ```
 
-Post-install, you may want to make sure AOS is working (`localhost:8020` by default), or check the log usign `tail -f` (edited in ._config.json but `/etc/adm/log` by default.)
+Post-install, you may want to make sure AOS is working (`localhost:8020` by default), or check the log using `tail -f` (edited in ._config.json but `/etc/adm/log` by default.)
 
 If you are looking for AOS to start on boot, you will need to use your OS' scheduler (Task Scheduler on Windows, systemd on Linux, launchd on macOS). 
 

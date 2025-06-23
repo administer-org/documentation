@@ -28,7 +28,7 @@ Begins moving ranks and apps over from Administer 1.2.3 to the new data format. 
 
 1. https://administer.notpyx.me is removed and https://aos-canary.admsoftware.org is added
    - This will not always be it's behavior.
-2. Old apps are removed, but are automatically replaced with their v2 API conterparts
+2. Old apps are removed, but are automatically replaced with their v2 API counterparts
 3. org.admsoftware.Reporter is installed
 
 ::: code-group
