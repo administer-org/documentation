@@ -206,7 +206,7 @@ export default defineConfig({
                                 collapsed: true,
                                 items: [
                                     { text: 'CurrentRanks', link: '/v2/schemas/admindb/currentranks' },
-                                    { text: 'Rank', link: '/v2/schemas/admindb/currentranks' }
+                                    { text: 'Rank', link: '/v2/schemas/admindb/rank' }
                                 ]
                             },
                             {
