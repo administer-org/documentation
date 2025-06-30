@@ -215,8 +215,8 @@ export default defineConfig({
                                 collapsed: true,
                                 items: [
                                     { text: 'AppList', link: '/v2/schemas/appdata/applist' },
-                                    { text: 'AppServerList', link: '/v2/schemas/applist/appserverlist' },
-                                    { text: 'InstallDates', link: '/v2/schemas/applist/installdates' }
+                                    { text: 'AppServerList', link: '/v2/schemas/appdata/appserverlist' },
+                                    { text: 'InstallDates', link: '/v2/schemas/appdata/installdates' }
                                 ]
                             },
                             {
