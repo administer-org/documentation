@@ -136,7 +136,8 @@ export default defineConfig({
                         items: [
                             { text: 'extra-data', link: '/v2/help/extra-data' },
                             { text: 'Translation Keys', link: '/v2/help/translation-keys' },
-                            { text: 'Icon Packs', link: '/v2/help/icon-packs' }
+                            { text: 'Icon Packs', link: '/v2/help/icon-packs' },
+                            { text: 'Default ButtonIDs', link: '/v2/help/default-button-ids' }
                         ]
                     },
                     {
@@ -194,6 +195,40 @@ export default defineConfig({
                             { text: 'Frontend', link: '/v2/client/frontend' },
                         ]
                     },
+                    {
+                        text: 'Data Schemas',
+                        collapsible: true,
+                        collapsed: true,
+                        items: [
+                            {
+                                text: 'Administer_Admins',
+                                collapsible: true,
+                                collapsed: true,
+                                items: [
+                                    { text: 'CurrentRanks', link: '/v2/schemas/admindb/currentranks' },
+                                    { text: 'Rank', link: '/v2/schemas/admindb/currentranks' }
+                                ]
+                            },
+                            {
+                                text: 'Administer_AppData',
+                                collapsible: true,
+                                collapsed: true,
+                                items: [
+                                    { text: 'AppList', link: '/v2/schemas/appdata/applist' },
+                                    { text: 'AppServerList', link: '/v2/schemas/applist/appserverlist' },
+                                    { text: 'InstallDates', link: '/v2/schemas/applist/installdates' }
+                                ]
+                            },
+                            {
+                                text: 'Administer_HomeStore',
+                                collapsible: true,
+                                collapsed: true,
+                                items: [
+                                    { text: 'Data', link: '/v2/schemas/homestore/user' }
+                                ]
+                            }
+                        ]
+                    }
                 ]
             },
             {

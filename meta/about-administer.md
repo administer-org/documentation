@@ -44,11 +44,7 @@ Key:
 
 ## Our current library of apps
 
-::: warning
-At the time of writing this is not done yet so please just see the panel for the time being.
-:::
-
-Please see https://administer.notpyx.me/apps/dir
+You may see our app library by visiting the Marketplace from inside of Administer.
 
 ## Credits
 

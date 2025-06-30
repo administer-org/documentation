@@ -39,7 +39,6 @@ any
 ```
 
 :::
-
 ## `Utilities.Logging`
 
 Many functions for creating logs which replicate to the Logs menu in the panel.

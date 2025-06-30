@@ -96,7 +96,7 @@ python3 -m AOS core serve
 
 Post-install, you may want to make sure AOS is working (`localhost:8020` by default), or check the log using `tail -f` (edited in ._config.json but `/etc/adm/log` by default.)
 
-If you are looking for AOS to start on boot, you will need to use your OS' scheduler (Task Scheduler on Windows, systemd on Linux, launchd on macOS). 
+If you are looking for AOS to start on boot, you will need to use your OS' scheduler (Task Scheduler on Windows, systemd on Linux (templates provided in source), launchd on macOS). 
 
 This guide is up to date as of AOS 5.4.1. You can find the setup script [here](https://github.com/administer-org/app-server/blob/main/Install_AOS.sh), which will have up to date instructions if this is old.
 
