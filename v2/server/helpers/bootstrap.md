@@ -1,6 +1,6 @@
 # BootstrapGame
 
-Tools for managing a game's first run.
+Tools for managing a game's first run and setting up Administer.
 
 ## `BootstrapGame`
 
