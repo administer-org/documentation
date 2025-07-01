@@ -1,6 +1,6 @@
 # Privacy Policy
 
-*This privacy policy is up to date as of May 17, 2025. It applies to all official Administer services (\*.admsoftware.org) and direct, unmodified copies of [AOS](https://to.admsoftware.org/git/app-server). Individually operated servers may have different privacy practices and generally these terms should not apply.*
+*This privacy policy is up to date as of July 1, 2025. It applies to all official Administer services (\*.admsoftware.org) and direct, unmodified copies of [AOS](https://to.admsoftware.org/git/app-server). Individually operated servers may have different privacy practices and generally these terms should not apply.*
 
 ## Preamble
 
@@ -40,7 +40,7 @@ This is to ensure we can perform accurate bans against you and our services.
 Attempts to connect directly to any Administer database nodes are blocked and logged accordingly. If any Administer Software staff (system administrators, database administrators, developers) or automated systems (Proxmox Firewall, ufw, Unifi, ...) detects abuse, we will make note of the following:
 
 - Your IP
-- mongo-collected logging information (information on your system and connction method)
+- mongo-collected logging information (information on your system and connection method)
 
 After said attacks are finished, if we find they are being made in a repeated manner we make abuse reports to your ISP or cloud provider who typically block you from said service.
 
@@ -49,6 +49,10 @@ We do not sell, share, or otherwise distribute your data or analytics. This will
 
 ## Logs
 When a request is made, we log the IP, Roblox place ID (if any), timestamp, request method, status code, server processing time, and any other request-specific logs for debugging purposes. The logs are purged weekly at midnight and are generally not read unless there is a service disruption caused by the backend code, at which point they are lost forever. We cannot recover purged logs.
+
+## Analytics
+
+We use a self-hosted [Plausible CE](https://plausibe.io) instance for collecting the URLs which are accessed the most over our AOS Nodes. Like version collecting, this cannot be opted out of because it is collected at a system level. Your Place ID is forwarded in the User-Agent header, but we cannot read it on our dashboard to ensure your privacy is maintained. All we know is what endpoints are being hit and how often, not by who or for what purpose.
 
 ## European Rights (GDPR)
 
