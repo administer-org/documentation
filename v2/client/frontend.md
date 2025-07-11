@@ -119,6 +119,39 @@ script.Parent.MouseLeave:Connect(Frontend.Drawer.HoverEnd)
 ```
 :::
 
+---
+# User Interfaces
+For more information, please see the [Interfacing with the end user](/v2/help/interfaces) guide.
+
+## `Frontend.Toast`
+
+Creates a Toast element and displays it to the user.
+
+::: code-group
+```luau [Annotation]
+Frontend.Toast(Config: {
+    Text: string,
+	Subtext: string,
+	Icon: string,
+	Timeout: number,
+
+	OnClick: () -> ()?
+})
+```
+
+```luau [Example]
+Frontend.Toast({
+	Icon = Utilities.Icon "clock-past",
+	Text = "(debug) Client initialization complete",
+	Subtext = "Done in 0s",
+	Timeout = 7,
+	OnClick = function()
+		print("ok")
+	end
+})
+```
+:::
+
 ## `Frontend.Popup.new`
 
 Creates a new popup.

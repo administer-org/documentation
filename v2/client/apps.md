@@ -213,10 +213,12 @@ This does not return anything and is probably not useful for you, it is used for
 
 ::: code-group
 ```luau [Annotation]
-Apps.Init(): ()
+Apps.Init(
+    OnlyRefreshCounts: boolean?
+): ()
 ```
 
 ```luau [Example]
-Apps.Init()
+Apps.Init(false)
 ```
 :::
