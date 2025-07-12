@@ -64,4 +64,4 @@ Despite our United States governing law, we offer fundamental GDPR rights to use
 
 ### Changes to this document
 
-Sometimes to allow for new features, we may opt to make changes to this policy. When changes occur, you will be notified via the Discord server, core panel (if it's a significant change), and other appropriate channels.
+Sometimes to allow for new features, we may opt to make changes to this policy. When changes occur, you will be notified via the Discord server, core panel (if it's a significant change), and other appropriate channels. Continued usage of Administer services is considered acceptance of new or updated terms.
