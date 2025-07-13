@@ -360,4 +360,5 @@ Frontend.InitGestureBar(): ()
 ```luau [Example]
 Frontend.InitGestureBar()
 ```
+
 :::

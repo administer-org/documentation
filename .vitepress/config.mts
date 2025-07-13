@@ -194,6 +194,8 @@ export default defineConfig({
                             { text: 'Admins', link: '/v2/client/admins' },
                             { text: 'Apps', link: '/v2/client/apps' },
                             { text: 'Frontend', link: '/v2/client/frontend' },
+                            { text: 'ClientSettings', link: '/v2/client/clientsettings' },
+                            { text: 'Utilities', link: '/v2/client/utilities' }
                         ]
                     },
                     {

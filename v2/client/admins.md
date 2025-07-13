@@ -54,7 +54,7 @@ Admins.CloseCeator()
 
 ## `Admins.RunCreatorApp`
 
-Initiailizes the Rank Creator.
+Loads the Rank Creator.
 
 ::: warning
 Not for external use.
