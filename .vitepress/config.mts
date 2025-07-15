@@ -149,7 +149,7 @@ export default defineConfig({
                             { text: 'AppModule', link: '/v2/apps/types/module' },
                             { text: 'InvocationAPI', link: '/v2/apps/types/invocation-api' },
                             { text: 'RichConfig', link: '/v2/apps/types/richconfig' },
-                            { text: 'WidgetConfig', link: '/v2/apps/types/widgetconfig' }
+                            { text: 'Widgets', link: '/v2/apps/types/widgetconfig' }
                         ]
                     },
                     {
@@ -195,7 +195,9 @@ export default defineConfig({
                             { text: 'Apps', link: '/v2/client/apps' },
                             { text: 'Frontend', link: '/v2/client/frontend' },
                             { text: 'ClientSettings', link: '/v2/client/clientsettings' },
-                            { text: 'Utilities', link: '/v2/client/utilities' }
+                            { text: 'Utilities', link: '/v2/client/utilities' },
+                            { text: 'Variables', link: '/v2/client/variables' },
+                            { text: 'Widgets', link: '/v2/client/widgets' }
                         ]
                     },
                     {

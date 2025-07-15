@@ -135,3 +135,115 @@ print(`This documentation entry was written {Utilities.FormatRelativeTime(
 )}`) --// This documentation entry was written 3 minutes ago
 ```
 :::
+
+## `Utilities.CreateReflection`
+
+Creates a reflected image.
+
+::: code-group
+```luau [Annotation]
+Utilities.CreateReflection(
+    ImageURL: string
+): EditableImage
+```
+
+```luau [Example]
+script.Parent.Image = Utilities.CreateReflection(Utilities.Icon("thumbs-up"))
+```
+:::
+
+## `Utilities.Translate`
+
+Gets a translated string based on its identifier. Prefers the users Roblox locale but overriding via Settings is possible. If the string was not found, it will return the identifier back.
+
+::: code-group
+```luau [Annotation]
+Utilities.Translate(
+    Identifier: string
+): string
+```
+
+```luau [Example]
+print(Utilities.Translate("generic.ThankYou")) --// -> Gracias!
+print(Utilities.Translate("generic.strings.DoesNotExist")) --// -> generic.strings.DoesNotExist
+```
+:::
+
+## `Utilities.Icon`
+
+Gets an Icon and returns its asset URL. If the icon is not valid to the current selected pack, `rbxassetid://nil` is returned.
+
+::: code-group
+```luau [Annotation]
+Utilities.Icon(
+    IconName: string
+): string
+```
+
+```luau [Example]
+script.Parent.Image = Utilities.Icon "user" --// -> rbxassetid://15317920838
+script.Parent.Image = Utilities.Icon "middle_finger" --// -> rbxassetid://nil
+```
+
+:::
+
+## `Utilities.ToSentenceCase`
+
+Takes in a sentence and turns it into sentence case. Does not preserve anything after the first letter, so you might want to concentrate other proper nouns.
+
+::: code-group
+```luau [Annotation]
+Utilities.ToSentenceCase(
+    Sentence: string
+): string
+```
+
+```luau [Example]
+print(Utilities.ToSentenceCase("hello, bob!")) --// Hello, bob!
+print(Utilities.ToSentenceCase("SCRIPT ERRORS MAKE ME ANGRY.")) --// Script errors make me angry.
+print(Utilities.ToSentenceCase("I love reading the Administer Documentation.")) --// I love reading the administer documentation.
+```
+
+:::
+
+## `Utilities.Heartbeat`
+
+Spawns Administer's internal heartbeat function.
+
+::: warning
+Not for external use.
+:::
+
+::: code-group
+```luau [Annotation]
+Utilities.Heartbeat(): ()
+```
+
+```luau [Example]
+task.defer(Utilities.Heartbeat)
+```
+
+:::
+
+## `Utilities.ProcessDono`
+
+Internal wrapper for processing donations and showing confetti if it was purchased.
+
+::: warning
+Not for external use.
+:::
+
+::: code-group
+```luau [Annotation]
+Utilities.ProcessDono(
+    Player: Player,
+	GamePassId: number, 
+	WasPurchased: boolean
+): ()
+```
+
+```luau [Example]
+Var.Services.MarketplaceService.GamePassPurchaseCompleted:Connect(Utilities.ProcessDono)
+```
+
+:::

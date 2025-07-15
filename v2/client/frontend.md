@@ -362,3 +362,22 @@ Frontend.InitGestureBar()
 ```
 
 :::
+
+## `Frontend.RegisterPanelKeybind`
+
+Registers functions for the panels keybind.
+
+::: warning
+This is probably not useful for your code and you should not use it.
+:::
+
+::: code-group
+```luau [Annotation]
+Frontend.RegisterPanelKeybind(): ()
+```
+
+```luau [Example]
+Frontend.RegisterPanelKeybind()
+```
+
+:::
