@@ -26,8 +26,8 @@ export default defineConfig({
             {
                 defer: '',
                 'data-domain': 'docs.admsoftware.org',
-                src: 'https://plausible.admsoftware.org/js/script.file-downloads.hash.outbound-links.js',
-            },
+                src: 'https://plausible.admsoftware.org/js/script.file-downloads.hash.outbound-links.js'
+            }
         ],
         [
             'script',
@@ -40,7 +40,7 @@ export default defineConfig({
             "script",
             {
                 src: "/logPageView.js"
-            },
+            }
         ]
     ],
 
