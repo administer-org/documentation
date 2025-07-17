@@ -138,7 +138,8 @@ export default defineConfig({
                             { text: 'Translation Keys', link: '/v2/help/translation-keys' },
                             { text: 'Icon Packs', link: '/v2/help/icon-packs' },
                             { text: 'Default ButtonIDs', link: '/v2/help/default-button-ids' },
-                            { text: 'Interfacing with the User', link: '/v2/help/interfaces' }
+                            { text: 'Interfacing with the User', link: '/v2/help/interfaces' },
+                            { text: 'FAQ', link: '/v2/help/faq' }
                         ]
                     },
                     {
