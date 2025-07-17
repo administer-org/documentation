@@ -38,7 +38,10 @@ Visit the "Library" tab of the Marketplace.
 
 ## Administer loaded into my native language, but a lot of strings are in English or are missing!
 
-Locales are a beta feature and are not complete yet. While we have basic support, the interface is still mostly English. We will be fixing it in a future update.
+Locales are a beta feature and are not complete yet. While we have basic support, the interface is still mostly English. 
+
+If you have the time, please log into the Administer Translator Portal weblate to contribute.
+https://translate.admsoftware.org
 
 ## How do I open the panel on mobile?
 
@@ -48,3 +51,6 @@ You need to swipe from the right side of your screen inwards. If that doesn't wo
 
 Hover over the topbar and then right and left click at the same time.
 
+## Why is x named after Administer Software and not Administer?
+
+Administer Software is the group behind Administer and related products. The name of our group is not simply "Administer" to avoid confusion (names like "Administer AOS" make sense but if we release a webpanel under a far different name it would confuse people).
