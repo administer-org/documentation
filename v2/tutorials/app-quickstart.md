@@ -14,14 +14,14 @@ The recommended structure for an Administer application is like so:
 ```
 MainModule (ModuleScript)/
 ├─ Content (Folder)/
-│  ├─ Main (ModuleScript)
+│  ├─ ApiExec (ModuleScript)
 ```
 
-Inside your MainModule, you should return an [InvocationAPI Object](../apps/types/invocation-api.md). For more in-depth information, see that, but for the sake of simplicity we are going to only include the basic here.
+Inside your MainModule, you should return an [InvocationAPI Object](/v2/apps/types/invocation-api). For more in-depth information, see that, but for the sake of simplicity we are going to only include the basic here.
 
-First, include the [Types](/v2/apps/types/typesapi) module to help you out, and then return a basic function with the invocation API and [required internal data](../apps/help/extra-data):
+First, include the [Types](/v2/server/core/types) module to help you out, and then return a basic function with the invocation API and [required internal data](/v2/help/extra-data):
 ```luau
-local Types = require(script.Parent.Parent.Core.Types)
+local Types = require(game.ServerScriptService.Administer.Loader.Core.Types)
 
 return function(InvokeAPI: Types.InvocationAPI, RequiredData)
     --// ...
@@ -29,7 +29,7 @@ end
 ```
 
 ::: info
-Everything in this section will be small portions of otherwise bigger concepts found [in the InvocationAPI document.](../types/invocation-api.md)
+Everything in this section will be small portions of otherwise bigger concepts found [in the InvocationAPI document.](/v2/apps/types/invocation-api)
 :::
 
 Now, inside of that function, you can create a new [RichConfig](../apps/types/richconfig) object and ask for the InvocationAPI to build it, like so:
@@ -45,7 +45,7 @@ return InvokeAPI.Construct(RichConfig, RequiredData)
 Your MainModule should now look like this.
 
 ```luau
-local Types = require(script.Parent.Parent.Core.Types)
+local Types = require(game.ServerScriptService.Administer.Loader.Core.Types)
 
 return function(InvokeAPI: Types.InvocationAPI, RequiredData)
 	local RichConfig = InvokeAPI.RichConfig()
@@ -80,7 +80,7 @@ This portion tells Administer what you want for your app. It's crucial to set th
 
 Specifying what versions work with your app take structured strings under the format `min:<minimum version>;max:<maximum version>`. To not set a cap on the version, set `max` to `max:50.0.9`.
 
-`AdministerModules` takes a list of what server and client modules you would like to have passed to your compiled app. They must be an [Administer Module](../apps/types/module.md).
+`AdministerModules` takes a list of what server and client modules you would like to have passed to your compiled app. It must be a valid Administer server module in the Modules folder (Administer API/Server Modules in the sidebar).
 
 ```luau
 RichConfig.Dependencies.AppPlatform = "min:2.0.0;max:5.0.0"
@@ -104,7 +104,30 @@ With the RichConfig done, you are now ready to tell Administer what to do when t
 
 If you followed the [structure](app-quickstart#section-i-basic-setup-structure) from earlier, you should have a folder with another module. You can pass that module's function (or any other for that matter) through.
 
-It returns three parameters but for the sake of simplicity we do not go into those here. Please refer to the [Bootstrap API.](../apps/types/richconfig.md#bootstrap)
+To tell Administer what to do with your app, you must provide the `Bootstrap` parameter. It can be any function but generally you should put a required module as shown in our example.
 
+```luau
+RichConfig.Bootstrap = function(
+    {}, --// For future use
+    State: Config.State?,
+    BuiltMetadata: {
+        FinishTime: string --// ms buildtime so like 528.12
+        RunContext: "LocalAPpsFolder" | "AOSDownload",
+        RanksWithAccess: number, --// 0 right now
+        Modules: {
+            { any }?
+        }
+    }
+)
+    --// App content
+    print(BuildMetadata)
+end
+```
 
-Now that you have a working server app, you're ready to [bring it to the client!](/v2/tutorials/client-quickstart.md)
+Now that you have a working server app, you're ready to [bring it to the client!](/v2/tutorials/client-quickstart.md) To give a client initializer, you have to use the `ClientFrame` parameter, like so:
+
+```luau
+RichConfig.ClientFrame = Instance.new("Frame")
+```
+
+And you're done! You app should look like our [standardized module format.](/v2/apps/types/module)
