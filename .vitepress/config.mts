@@ -98,7 +98,8 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { text: 'Installation', link: '/quickstart/installation' },
-                            { text: 'Initial Configuration', link: '/quickstart/initialConfig' }
+                            { text: 'Initial Configuration', link: '/quickstart/initialConfig' },
+                            { text: 'Ranks', link: '/quickstart/admins' }
                         ]
                     }
                 ]
