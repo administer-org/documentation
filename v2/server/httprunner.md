@@ -6,13 +6,24 @@ Various HTTPService wrappers for ease of use.
 
 RequestAsync GET wrapper. Returns the output of OnOK or OnError.
 
+**Timeout**: Stops the request after x seconds have passed
+**DontLookForAlts**: If `false` or `nil` and `URL` is an official AOS instance (aos-xxx-xx.admsoftware.org), then HttpRunner will attempt to find a new server if the request fails for any non-400 reason to avoid system outages.
+**Headers**: Request headers
+**Debug**: Enables debug printing
+
 ::: code-group
 ```luau [Annotation]
 Http.GetRoute(
     URL: string,
     Path: string,
     OnOK: (string, {any}) -> (any)?
-    OnError: (number, {any}) -> (any)?
+    OnError: (number, {any}) -> (any)?,
+    Options: {
+        Timeout: number?,
+        DontLookForAlts: boolean?,
+        Headers: { any }?,
+        Debug: boolean?
+    }?
 )
 ```
 
@@ -30,7 +41,7 @@ end)
 
 ## `Http.PostRoute`
 
-RequestAsync POST wrapper. Appends `X-Administer-Version` to the request headers and any others in `MiscConfig.Headers`.
+RequestAsync POST wrapper. Appends `X-Adm-Version`  and `X-Adm-Branch` to the request headers and any others in `MiscConfig.Headers`.
 
 Returns the output of OnOK or OnError.
 
