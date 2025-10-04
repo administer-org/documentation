@@ -32,6 +32,20 @@ Admins.ClearEditState()
 ```
 :::
 
+## `Admins.GetEditState`
+
+Gets a fresh copy of the Admin environment with `Strings` cleared for easier reading and processing.
+
+::: code-group
+```luau [Annotation]
+Admins.GetEditState(): { AdminState }
+```
+
+```luau [Example]
+print(Admins.GetEditState())
+```
+:::
+
 ## `Admins.OpenCreator`
 
 Opens the rank creator.

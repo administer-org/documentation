@@ -26,6 +26,35 @@ print({
     "fr" = "Bonjour!"
 }[Language])
 ```
+
+:::
+
+## `Utilities.GetSettings`
+
+Acts like `GetSetting`, but rather than a string setting ID a dictionary of settings is accepted.
+
+::: warning
+If you are loading settings at runtime, they might not be loaded yet. Implementing `GetSettingChanged` or `Var.Remotes.SettingsLoaded.OnClientEvent:Wait()` is never a bad idea.
+:::
+
+::: code-group
+```luau [Annotation]
+Utilities.GetSettings(
+    { Setting: string }
+): { any }
+```
+
+```luau [Example]
+local Settings = Utilities.GetSettings({"Locale", "AnimationSpeed"})
+
+task.wait(Settings.AnimationSpeed)
+
+print({
+    "en": "Hello!",
+    "es" = "Hola!",
+    "fr" = "Bonjour!"
+}[Settings.Locale])
+```
 :::
 
 ## `Utilities.GetSettingChanged`
@@ -36,7 +65,7 @@ Returns a RemoteEvent which is fired every time a setting is changed.
 ```luau [Annotation]
 Utilities.GetSettingChanged(
     Setting: string
-): RemoteEvent
+): RemoteEvent?
 ```
 
 ```luau [Example]
@@ -60,13 +89,15 @@ Utilities.ShortNumber(
 ```luau [Example]
 local BigNumber = 875834923
 
-script.Parent.Text = Utilities.ShortNumber(BigNumber)
+script.Parent.Text = Utilities.ShortNumber(BigNumber) --// -> 875.8M 
 ```
 :::
 
 ## `Utilities.FormatRelativeTime`
 
 Takes a Unix timestamp (1752386926) and converts it to a relative timestamp (4 minutes ago)
+
+Strings are automatically translated using a user's locale.
 
 ::: code-group
 ```luau [Annotation]
@@ -125,14 +156,32 @@ Creates a new notification.
 ::: code-group
 ```luau [Annotation]
 Utilities.NewNotification(
-    UnixDate: number
+    AppTitle: string,
+	Icon: string,
+	Body: string,
+	Heading: string,
+	Duration: number?,
+	Options: { {
+        Text: string,
+        Icon: string,
+        OnClick: () -> ()
+    }? }?
 ): string
 ```
 
 ```luau [Example]
-print(`This documentation entry was written {Utilities.FormatRelativeTime(
-    1752386926
-)}`) --// This documentation entry was written 3 minutes ago
+Utilities.NewNotification(
+    "Administer",
+    Utilities.Icon "administer",
+    "This is a test of the notification system.",
+    "Test",
+    15,
+    {{
+        Text = "Cool",
+        Icon = Utilities.Icon "like",
+        OnClick = print
+    }}
+)
 ```
 :::
 
@@ -202,6 +251,7 @@ Utilities.ToSentenceCase(
 print(Utilities.ToSentenceCase("hello, bob!")) --// Hello, bob!
 print(Utilities.ToSentenceCase("SCRIPT ERRORS MAKE ME ANGRY.")) --// Script errors make me angry.
 print(Utilities.ToSentenceCase("I love reading the Administer Documentation.")) --// I love reading the administer documentation.
+print(Utilities.ToSentenceCase("i love it when i have to use the")..Utilities.ToSentenceCase("administer api")) --// I love it when i have to use the Administer api
 ```
 
 :::

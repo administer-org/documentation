@@ -28,7 +28,7 @@ end)
 
 ## `Frontend.Open`
 
-Forces the panel. Optionally yields.
+Forces the panel. Optionally yields with `WaitForCompletion`. If `Var.UseAcrylic` is enabled, the acrylic effect is created on the `Var.MainFrame` target.
 
 ::: code-group
 ```luau [Annotation]
@@ -45,6 +45,8 @@ Var.Remotes.OpenPanel.OnClientEvent:Connect(Frontend.Open)
 ## `Frontend.Open`
 
 Closes the panel. If `Instant: true`, the animation will be bypassed.
+
+If `Frame` is passed, the animation will be played on that frame instead of `Var.MainFrame`.
 
 ::: code-group
 ```luau [Annotation]
@@ -65,7 +67,7 @@ end)
 
 ## `Frontend.Drawer.Open`
 
-Opens the App Drawer. If `Var.DoHeaderEffects` is not `true` or if a popup is open, then the call is dropped.
+Opens the App Drawer. If `Var.DoHeaderEffects` is not `true` or if a popup is open, then the call is dropped and ignored.
 
 ::: code-group
 ```luau [Annotation]
@@ -77,7 +79,7 @@ script.Parent.MouseButton1Click:Connect(Frontend.Drawer.Open)
 ```
 :::
 
-## `Frontend.Drawer.Open`
+## `Frontend.Drawer.Close`
 
 Closes the app drawer.
 
@@ -117,7 +119,6 @@ Frontend.Drawer.HoverEnd(): ()
 ```luau [Example]
 script.Parent.MouseLeave:Connect(Frontend.Drawer.HoverEnd)
 ```
-:::
 
 ---
 # User Interfaces
@@ -142,8 +143,8 @@ Frontend.Toast(Config: {
 ```luau [Example]
 Frontend.Toast({
 	Icon = Utilities.Icon "clock-past",
-	Text = "(debug) Client initialization complete",
-	Subtext = "Done in 0s",
+	Text = "Client initialization complete!",
+	Subtext = "Done in 534ms",
 	Timeout = 7,
 	OnClick = function()
 		print("ok")
@@ -233,20 +234,6 @@ Frontend.Popup.new(
 ```
 :::
 
-## `Frontend.Drawer.HoverBegin`
-
-Small animation on the app drawer button to show that there is something there
-
-::: code-group
-```luau [Annotation]
-Frontend.Drawer.HoverBegin(): ()
-```
-
-```luau [Example]
-script.Parent.MouseOver:Connect(Frontend.Drawer.HoverBegin)
-```
-:::
-
 ## `Frontend.Popup.Close`
 
 Forcibly close a popup while bypassing the `Close` callback function.
@@ -263,7 +250,7 @@ Frontend.Popup.Close()
 
 ## `Frontend.Popup.Open`
 
-Same thing as above. May cause user confusion if used too frequently as data will not be updated.
+Same thing as above, but it opens instead of closes. May cause user confusion if used too frequently as data will not be updated.
 
 ::: code-group
 ```luau [Annotation]
@@ -283,7 +270,7 @@ Swaps the currently active frame for a new one.
 ```luau [Annotation]
 Frontend.SwapAppBasic(
     NewFrame: Frame | CanvasGroup,
-    Config: {
+    NewConfig: {
         Name: string,
         Icon: string
     }
@@ -344,12 +331,21 @@ end)
 ```
 :::
 
-## `Frontend.InitGesureBar`
+## `Frontend.InitGestureBar`
 
 Registers functions for the gesture bar.
 
 ::: warning
 This is probably not useful for your code and you should not use it.
+:::
+
+::: warning [Deprecation notice]
+This method is deprecated and no longer returns any data. It will be removed soon and should not be used for new Apps.
+
+This API has been superseded by `Frontend.SpawnOverlay`.
+
+> Deprecation in: Administer 2.1.0
+> API Removal in: Administer 2.2.0
 :::
 
 ::: code-group
@@ -363,12 +359,37 @@ Frontend.InitGestureBar()
 
 :::
 
-## `Frontend.RegisterPanelKeybind`
+## `Frontend.SpawnOverlay`
 
-Registers functions for the panels keybind.
+Spawns an Administer generated overlay for a frame.
 
 ::: warning
-This is probably not useful for your code and you should not use it.
+Do not just run this for any frame, it will break Administer's window manager. It should only be used for frames parented to the root ScreenGUI.
+:::
+
+::: code-group
+```luau [Annotation]
+Frontend.SpawnOverlay(
+    Frame: Frame | CanvasGroup
+): ()
+```
+
+```luau [Example]
+local NewFrame = Instance.new("Frame")
+
+NewFrame.Parent = Var.MainFrame.Parent
+
+Frontend.SpawnOverlay(Frame)
+```
+
+:::
+
+## `Frontend.RegisterPanelKeybind`
+
+Loads core keybind-related settings and binds events.
+
+::: warning
+This is probably not useful for your code because it does not return data.
 :::
 
 ::: code-group
@@ -378,6 +399,106 @@ Frontend.RegisterPanelKeybind(): ()
 
 ```luau [Example]
 Frontend.RegisterPanelKeybind()
+```
+
+:::
+
+## `Frontend.AddButtonAnimation`
+
+Initializes a button animation (hover, click, haptics, and ripple effects) for a requested button.
+
+::: code-group
+```luau [Annotation]
+Frontend.AddButtonAnimation(
+    Button: TextButton | ImageButton
+)
+```
+
+```luau [Example]
+Frontend.AddButtonAnimation(Instance.new("TextButton", script.Parent))
+```
+
+:::
+
+## `Frontend.PrepTheme`
+
+Prepares the `Var.MainFrame` to be styled by color snapping and adding attributes. In order to use `Frontend.LoadTheme`, this must be called first.
+
+::: code-group
+```luau [Annotation]
+Frontend.PrepTheme()
+```
+
+```luau [Example]
+Frontend.PrepTheme()
+```
+
+:::
+
+## `Frontend.LoadTheme`
+
+Loads a theme based off its theme configuration file.
+
+::: info 
+This API is only valid on Administer 2.2.0 or later, which is not yet generally available. Further documentation for themes will be added when an API schema is set in stone.
+:::
+
+::: code-group
+```luau [Annotation]
+type Color = {
+    Color: Color3,
+    Transparency: number
+}
+
+Frontend.LoadTheme(
+    ThemeConfig: {
+        Name: string,
+        Author: {
+            Name: string,
+            ID: number
+        },
+
+        IsDark: boolean,
+        EnableAcrylic: boolean,
+
+        Colors: {
+            Background: {
+                Primary: Color,
+                Header: Color,
+                Panel: Color,
+                Card: Color,
+                Modal: Color
+            },
+
+            Text: {
+                Important: Color,
+                Primary: Color,
+                Secondary: Color,
+                Subtle: Color
+            },
+
+            Buttons: {
+                IconButton: Color,
+                SquareButton: Color
+            },
+
+            Colors: {
+                Accent: Color,
+                Red: Color,
+                Orange: Color,
+                Green: Color,
+                Shimmer: Color
+            }
+        },
+
+        OnStyle: () -> (),
+        Selected: () -> ()
+    }
+)
+```
+
+```luau [Example]
+Frontend.PrepTheme(require(script.Parent.DefaultLight))
 ```
 
 :::

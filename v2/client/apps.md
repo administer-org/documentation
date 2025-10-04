@@ -8,7 +8,7 @@ Adds a button to the App Drawer. Before making the button visible, Administer ch
 
 ::: code-group
 ```luau [Annotation]
-Apps.AddAppDrawerBttton(
+Apps.AddAppDrawerButton(
     Config: {
         ButtonID: string,
         AppName: string,
@@ -92,6 +92,13 @@ Apps.AddAppDrawerButton({
 ## `Apps.GetVersionLabel`
 
 Compares an API version and returns a formatted string.
+
+::: warning [Deprecation notice]
+This method is deprecated and no longer returns any data. It will be removed soon and should not be used for new Apps.
+
+> Deprecation in: Administer 2.1.0
+> API Removal in: Administer 2.2.0
+:::
 
 ::: code-group
 ```luau [Annotation]
@@ -185,6 +192,20 @@ Apps.LoadAppList()
 ```
 :::
 
+## `Apps.InitSearchbar`
+
+Loads the Searchbar UI and binds events. This method is mostly for internal use.
+
+::: code-group
+```luau [Annotation]
+Apps.InitSearchbar()
+```
+
+```luau [Example]
+Apps.InitSearchbar()
+```
+:::
+
 ## `Apps.LoadLibrary`
 
 Loads the Library page.
@@ -205,7 +226,7 @@ Apps.LoadLibrary()
 
 ## `Apps.Init`
 
-Enables the Sidebar and changes text labels.
+Enables the Sidebar (via `Apps.InitSidebar`) and changes text labels. If `OnlyRefreshCounts: true`, then the subtext under the Library label will be updated and the function will exit.
 
 ::: warning
 This does not return anything and is probably not useful for you, it is used for Administer to launch the Marketplace at runtime.
@@ -219,6 +240,14 @@ Apps.Init(
 ```
 
 ```luau [Example]
+--// We have installed a new app and want to update the label
+local function DownloadApp(...)
+    --// ...
+    Apps.Init(true) --// refresh label
+end
+
+repeat task.wait() until game:IsLoaded()
+
 Apps.Init(false)
 ```
 :::
