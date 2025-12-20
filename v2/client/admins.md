@@ -62,7 +62,7 @@ Closes the rank creator.
 
 ::: code-group
 ```luau [Annotation]
-Admins.CloseCeator()
+Admins.CloseCreator()
 ```
 :::
 

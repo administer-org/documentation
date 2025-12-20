@@ -14,6 +14,6 @@ Because of that, we recommend the following to be reserved for **just AOS and a 
 
 Please note that you may need to increase resource availability during the install process to ensure uv can write packages in a timely manner.
 
-These are just base recommendations and are not all-encompassing, your needs will strongly vary (hosting mongo? heavy OS (ubuntu)? LXC, qemu, or baremetal? shared machine?). On `us-1`, AOS along with Arch Linux is operating with 200MB of memory and in 3GB of disk space roughly. These recommendations are just general safe assumptions based on our experience with 5 nodes.
+These are just base recommendations and are not all-encompassing, your needs will strongly vary (hosting mongo? heavy OS (ubuntu)? LXC, qemu, or bare metal? shared machine?). On `us-1`, AOS along with Arch Linux is operating with 200MB of memory and in 3GB of disk space roughly. These recommendations are just general safe assumptions based on our experience with 5 nodes.
 
 At the moment, Docker is not supported out of the box, however, that does not mean you are unable to run it in a generic Python container. We are looking into docker support for the long term, but for now we are continuing to support systemd-based installs.

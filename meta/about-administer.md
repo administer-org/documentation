@@ -39,7 +39,7 @@ Key:
 <sup>2</sup> = Based on public pricing discussion, there is no official stated price.<br>
 <sup>3</sup> = Code is obfuscated.<br>
 <sup>4</sup> = As far as is public knowledge.<br>
-<sup>6</sup> = Only the accent colour and notification sounds are customisable.<br>
+<sup>6</sup> = Only the accent color and notification sounds are customizable.<br>
 </p>
 
 ## Our current library of apps

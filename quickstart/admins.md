@@ -30,7 +30,7 @@ For example, in the below image shows two users and a group with many ranks.
 
 ## Step 3. Access
 
-Unlike traditional admin panels, Administer does not have static permissions (can ban, can kick, can audit, ...). Instead, you can control which apps and subapps a rank can access, along with individual commands in the soon future. 
+Unlike traditional admin panels, Administer does not have static permissions (can ban, can kick, can audit, ...). Instead, you can control which apps and sub-apps a rank can access, along with individual commands in the soon future. 
 
 To prohibit the use of an app or command, simply click it. Once the entry turns grey, that means it's disabled and cannot be used by the newly created rank. Please note that you will only be able to add apps that your rank has access to. 
 

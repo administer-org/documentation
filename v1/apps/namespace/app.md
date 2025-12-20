@@ -80,7 +80,7 @@ Settings may be tweaked based on user input.
     InstallSource:      string,  --// Install source app server URL
     Settings:           table {  --// The settings for your app, whatever you gave through BuildApp
         IsModified:     boolean, --// Has been modified?
-        LastMofidied:   number,  --// Modification time in Unix
+        LastModified:   number,  --// Modification time in Unix
         [...]
     }    
 }

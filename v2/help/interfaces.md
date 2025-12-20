@@ -17,7 +17,7 @@ Frontend.Toast({
     Timeout = 5
     Icon = Utilities.Icon "check-plain",
     Text = "This is a toast",
-    Subtext = "Toasts are great for unintrusive notices!",
+    Subtext = "Toasts are great for unobtrusive notices!",
     OnClick = function()
         print("The toast has been clicked!")
     end

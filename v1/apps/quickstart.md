@@ -10,7 +10,7 @@ Skip to the [Detailed Documentation](./namespace/app.md).
 
 ::: warning Hi there, v1 user!
 
-The v1 API (for Administer 1.0.0 - 1.2.4) is soon going to be replaced with the 2.0 API. We do not recommend you write any new applications with the V1 API and instead hold out for the 2.0 API unless you are prepared to migrate a large potrion of your Administer-facing code.
+The v1 API (for Administer 1.0.0 - 1.2.4) is soon going to be replaced with the 2.0 API. We do not recommend you write any new applications with the V1 API and instead hold out for the 2.0 API unless you are prepared to migrate a large portion of your Administer-facing code.
 
 :::
 

@@ -17,7 +17,7 @@ Schema Example:
         }
     ],
     "CreationReason": "Created in the rank editor",
-    "Name": "testing live rerankin",
+    "Name": "testing live re-ranking",
     "AdmRankVersion": 3,
     "Color": "c0f3f4",
     "CreatorID": 133017837,

@@ -56,7 +56,7 @@ A small label on the homepage.
 
 **RenderFrequency**: How often to update your text.
 
-**DefautltValue**: What to display when `OnRender` has not been called, usually on the homepage selector.
+**DefaultValue**: What to display when `OnRender` has not been called, usually on the homepage selector.
 
 **OnRender**: Returns the content displayed on the widget. MUST return a value or else the call will fail.
 

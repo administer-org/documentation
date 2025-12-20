@@ -25,7 +25,7 @@ Holds data about the ranks in a given game.
     "Names": [
         "Administrator",
         "cool rank",
-        "testing live reranking"
+        "testing live re-ranking"
     ],
     "Count": 12,
     "GroupAdminIDs": {

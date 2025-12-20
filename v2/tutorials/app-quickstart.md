@@ -68,7 +68,7 @@ RichConfig.AppMeta.Name = "Test App" --// The name shown in UI
 RichConfig.AppMeta.DisplayName = "App" --// The name shown in the app sidebar
 RichConfig.AppMeta.Description = "This is a test app for the 2.0 API!" --// The description shown on hover and in the App Library
 RichConfig.AppMeta.Icon = "rbxassetid://00000000" --// The icon shown in the sidebar
-RichConfig.AppMeta.Background = "rbxassetid://00000000" --// The image shown in image backgrounds whereever Administer wants
+RichConfig.AppMeta.Background = "rbxassetid://00000000" --// The image shown in image backgrounds wherever Administer wants
 RichConfig.AppMeta.Copyright = "© 2025 pyxfluff" --// Used in the app library
 RichConfig.AppMeta.Version = "1.0.0" --// Also in the app library
 ```

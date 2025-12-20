@@ -68,7 +68,7 @@ If we click both of them, they correctly come up blank.
 
 ## Toasts/Administer UIs
 
-Now, what if you want to make a Toast? We have a full guide on [user interfaces](/v2/help/interfaces), so this portition is going to be minimal.
+Now, what if you want to make a Toast? We have a full guide on [user interfaces](/v2/help/interfaces), so this portion is going to be minimal.
 
 First, import the [Frontend module](/v2/client/frontend):
 ```luau
@@ -120,7 +120,7 @@ For a little bit extra, we can remove the hardcoded icons and strings by using U
 local Utils = require(Administer.Utilities)
 ```
 
-Now let's revise the call once again, implementing translations and icons while renaming our subapps to "Marketplace" and "Themes":
+Now let's revise the call once again, implementing translations and icons while renaming our sub-apps to "Marketplace" and "Themes":
 
 ::: danger
 It is very bad practice to translate Button IDs. They are meant to stay static and should not change based on languages.
