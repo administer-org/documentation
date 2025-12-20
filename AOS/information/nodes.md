@@ -1,3 +1,8 @@
+---
+title: AOS Nodes
+description: An AOS node is a server running AOS which is attached to the official database. Learn more about our official nodes.
+---
+
 # Official AOS Nodes
 
 ## What is an AOS node?

@@ -1,3 +1,8 @@
+---
+title: AOS Setup
+description: Learn how to download and run AOS on your own server.
+---
+
 # AOS Setup
 
 Setting an AOS Server up is simple! Just follow a quick few steps and you'll be ready for production
@@ -77,7 +82,7 @@ cp ._config.json.templ ._config.json
 nano ._config.json
 nano ._aos.json # Optionally, you can edit your default host, port, and uvicorn workers here
 ```
-4. Test database connection and generate keys
+4. Test database connection and generGet up and running with Administer using out 45 second easy installation guide.ate keys
 ```sh
 python3 -m AOS database genkeys
 ```

@@ -9,7 +9,7 @@ RequestAsync GET wrapper. Returns the output of OnOK or OnError.
 **Timeout**: Stops the request after x seconds have passed
 **DontLookForAlts**: If `false` or `nil` and `URL` is an official AOS instance (aos-xxx-xx.admsoftware.org), then HttpRunner will attempt to find a new server if the request fails for any non-400 reason to avoid system outages.
 **Headers**: Request headers
-**Debug**: Enables debug printing
+**Debug**: Enables debug printing1
 
 ::: code-group
 ```luau [Annotation]

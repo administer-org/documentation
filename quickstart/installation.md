@@ -1,3 +1,8 @@
+---
+title: Installation
+description: Get up and running with Administer using out 45 second easy installation guide.
+---
+
 # Installation
 
 ::: info
@@ -14,7 +19,7 @@ Additionally, some plugins and additional features may require "Allow Third Part
 
 These can all be enabled in Game Settings -> Security
 
-![An image](./securityPermissions.png)
+![A dialog box showing permissions enabled for a game](./securityPermissions.png)
 :::
 
 To ensure the installation is complete, run a test server, wait a few moments as it may take some time for Administer to load for the first time, and you should see a prompt from Administer on the bottom right of the screen.<br>

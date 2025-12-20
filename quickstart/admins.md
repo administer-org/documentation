@@ -1,3 +1,8 @@
+---
+title: Admin Configuration
+description: Learn how to create, manage, and edit your Administer Admin ranks
+---
+
 # Administrator Configuration
 
 Administer features a unique no-code configuration setup, with ranks included.

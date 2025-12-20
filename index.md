@@ -20,7 +20,7 @@ hero:
       link: /AOS/information/about
   image:
     src: https://github.com/administer-org/.github/blob/main/profile/CnP_02042025_235822.png?raw=true
-    alt: "Administer"
+    alt: "Administer Logo"
 
 features:
   - icon: 🛠️
