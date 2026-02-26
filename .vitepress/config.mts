@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 
 export default defineConfig({
-base: '/',
+    base: '/',
     title: "Administer",
     titleTemplate: ":title · Administer Documentation",
     description: "API documentation for Administer, Administer AOS, Apps. Learn how to make an app, use web APIs, or contribute to Administer.",
