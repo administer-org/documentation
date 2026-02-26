@@ -1,5 +1,6 @@
 name = "documentation"
 compatibility_date = "2025-01-01"
+pages_build_output_dir = "docs/.vitepress/dist"
 
 [assets]
 directory = "docs/.vitepress/dist"
